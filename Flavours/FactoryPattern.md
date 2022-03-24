@@ -6,6 +6,7 @@ problems:
     - How to avoid direct object construction?
 tags: 
     - Design
+nav_order: 1
 ---
 
 # Factory pattern
