@@ -1,3 +1,13 @@
+---
+layout: default
+title: Factory Pattern
+parent: Xtrem TDD
+problems:
+    - How to avoid direct object construction?
+tags: 
+    - Design
+---
+
 # Factory pattern
 #### *How to avoid direct object construction?*
 
