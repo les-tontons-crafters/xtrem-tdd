@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: flavour
 title: Factory Pattern
 parent: Xtrem TDD
 problems:

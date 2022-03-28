@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: flavour
 title: A.D.R
 parent: Xtrem TDD
 problems:
