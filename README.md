@@ -1,5 +1,6 @@
 # Xtrem TDD
-This repository is used to generate a knowledge base / book to help developers discover useful topics.
+This repository is used to generate a knowledge base / book to help developers discover useful topics.  
+For now it is hosted on github pages [here](https://les-tontons-crafters.github.io/xtrem-tdd)
 
 ![Value proposition canvas](img/value-proposition-canvas.jpg)
 
