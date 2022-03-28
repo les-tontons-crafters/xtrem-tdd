@@ -131,20 +131,28 @@ layout: table_wrappers
         {% endif %}
       {% endunless %}
       <div id="main-content" class="main-content" role="main">
-            <div id="problems-content">
-                <h3>Problems you can solve with it :</h3>
-                <ul>
-                {% for problem in page.problems %}
-                    <li>{{ problem }}</li>
-                {% endfor %}
-                </ul>
-        </div> 
+        <div id="problems-content">
+            <h3>Problems you could solve with {{page.title}}:</h3>
+            <ul>
+            {% for problem in page.problems %}
+                <li><code class="language-plaintext highlighter-rouge">
+                    {{ problem }}
+                </code></li>
+            {% endfor %}
+            </ul>
+        </div>
 
         {% if site.heading_anchors != false %}
           {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
         {% else %}
           {{ content }}
         {% endif %}
+
+        <div id="tags-content">
+            {% for tag in page.tags %}
+                <span class="label {{ tag }}">{{ tag }}</span>
+            {% endfor %}
+        </div>
 
         {% if page.has_children == true and page.has_toc != false %}
           <hr>
