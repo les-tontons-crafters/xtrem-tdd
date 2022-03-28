@@ -83,7 +83,7 @@ Identify a Design Decision to make and :
 - Create your first ADR at the root of your repository
 - Use the template presented
 
-## Online resources
+## Resources
 - [Lightweight Architecture Decision Records - Thoughtworks Tech Radar](https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records)
 - [Architecture Decision Record Canvas](https://itabok.iasaglobal.org/architecture-decision-record/)
 - [https://adr.github.io/](https://adr.github.io/)
