@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Architecture Decision Record
+title: A.D.R
 parent: Xtrem TDD
 problems:
     - How to capture important architecture or design decision made along with its context and consequences ?
