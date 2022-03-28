@@ -30,6 +30,6 @@ This book is ideal for :
 - Technical coaches who want to add tools to their own toolbox
 
 ### Our values
-- Keen to share their knowledge with the whole community
+- Keen to share our knowledge with the whole community
 - Steadily seeking how to build the thing right
-- Continuous improvement and learning
+- Continuously improving and learning
