@@ -11,7 +11,8 @@ nav_order: 2
 # Architecture Decision Record (ADR)
 An architecture decision record (ADR) is a document that captures an important architecture decision made along with its context and consequences.
 
-{:toc}
+- TOC
+    {:toc}
 
 ## Description
 You can capture any kind of decision :
@@ -29,13 +30,14 @@ When adopting ADRs you will observe many benefits :
 
 ## How to
 - Define a small process with your team mates
+
 ![Example process](img/adr-states.png)
 - Start with a template (Don't be too formal at the beginning)
     - Start with an existing one (check related resources)
 - You can use a tool like [adr-tools](https://github.com/npryce/adr-tools)
 
 ## Template
-``` Markdown
+```markdown
 # Title
 - Date : <date>
 - Who were involved in the decision : <decides>
