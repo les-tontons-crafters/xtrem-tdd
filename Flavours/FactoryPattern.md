@@ -61,6 +61,7 @@ public class Square : IShape
 ### Without a factory
 - The code contains strong coupling to each implementation. 
 - Adding/altering behaviors will require to change the calling class.  
+
 ```csharp
 public static void main(string[] args)
 {
@@ -77,6 +78,7 @@ public static void main(string[] args)
 - The code does not have a direct coupling to any `IShape` implementation, thanks to **Abstraction**.
 - Adding/altering behaviors will only require to change the factory. Our code is open for extension but closed for modification (**OCP**).
 - The factory is **reusable**, reducing duplication in the codebase.
+
 ```csharp
 public class ShapeFactory
 {
@@ -106,6 +108,6 @@ public static void main(string[] args)
 }
 ```
 ## Online resources
-[Refactoring Guru](https://refactoring.guru/design-patterns/factory-method)
-[DotFactory](https://www.dofactory.com/net/factory-method-design-pattern)
-[Pragmatic Ways Blog](https://pragmaticways.com/factory-design-pattern/)
+- [Refactoring Guru](https://refactoring.guru/design-patterns/factory-method)
+- [DotFactory](https://www.dofactory.com/net/factory-method-design-pattern)
+- [Pragmatic Ways Blog](https://pragmaticways.com/factory-design-pattern/)
