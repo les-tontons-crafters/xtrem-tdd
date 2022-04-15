@@ -1,10 +1,7 @@
 # Welcome
 This repository is used to generate a knowledge base / book to help developers discover useful topics.  
-For now it is hosted [here](https://main--jolly-syrniki-92d958.netlify.app/)
-
 ![Value proposition canvas](../images/value-proposition-canvas.jpg)
 
-## Pitch of the book
 **Software engineering** has been around for decades.
 Still, we tend to constantly spend time **investigating problems** that were **already solved** numerous times in the past.
 
