@@ -1,2 +1,5 @@
+public/
+node_modules/
+.cache/
 .DS_Store
 .idea
