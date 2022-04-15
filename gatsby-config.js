@@ -14,7 +14,7 @@ module.exports = {
       resolve: 'gatsby-theme-kb',
       options: {
         contentPath: path.resolve(__dirname, 'content'),
-        rootNote: 'welcome',
+        rootNote: 'home',
         wikiLinkLabelTemplate: '{{ title }}',
         getPluginMdx(defaultPluginMdx) {
           defaultPluginMdx.options.gatsbyRemarkPlugins.push({
