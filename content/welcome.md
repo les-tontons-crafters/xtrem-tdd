@@ -1,6 +1,6 @@
 # Welcome
 This repository is used to generate a knowledge base / book to help developers discover useful topics.  
-For now it is hosted [here](https://les-tontons-crafters.github.io/xtrem-tdd)
+For now it is hosted [here](https://main--jolly-syrniki-92d958.netlify.app/)
 
 ![Value proposition canvas](../images/value-proposition-canvas.jpg)
 
