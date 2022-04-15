@@ -33,3 +33,16 @@ This site is ideal for :
 - Keen to share our knowledge with the whole community
 - Steadily seeking how to build the thing right
 - Continuously improving and learning
+
+## How to
+### Contribute
+`To Do`
+
+### Run the site locally
+This website is generated through [gatsby](https://www.gatsbyjs.com/) :
+- [Install yarn](https://classic.yarnpkg.com/lang/en/docs/install/) 
+- Run the folowing commands :
+```shell
+yarn #install the dependencies
+yarn dev #run the site locally
+```
