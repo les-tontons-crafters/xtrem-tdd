@@ -44,25 +44,28 @@ type RemarkNode = {
 export default function SiteSidebar(props: ISiteSidebarProps) {
   const { pageContext, title, isMobileMode } = props
   const data = useStaticQuery(graphql`
-    query SiteSidebarQuerySorted {
-      allMdx(sort: {fields: slug}) {
-        nodes {
-          parent {
-            id
-            ... on File {
+      query SiteSidebarQuerySorted {
+        allMdx(sort: {fields: slug}) {
+          nodes {
+            frontmatter {
+              title
+            }
+            parent {
               id
-              name
-              relativeDirectory
-              relativePath
-              fields {
-                title
-                slug
+              ... on File {
+                id
+                name
+                relativeDirectory
+                relativePath
+                fields {
+                  title
+                  slug
+                }
               }
             }
           }
         }
       }
-    }
   `)
 
   const [treeNodes, setTreeNodes] = useState<TreeNodeRawData[]>([])
