@@ -46,3 +46,5 @@ This website is generated through [gatsby](https://www.gatsbyjs.com/) :
 yarn #install the dependencies
 yarn dev #run the site locally
 ```
+
+## Contributors
