@@ -1,4 +1,6 @@
 # Xtrem TDD
+[![Contributors](https://github.com/les-tontons-crafters/xtrem-tdd/actions/workflows/contributors.yml/badge.svg)](https://github.com/les-tontons-crafters/xtrem-tdd/actions/workflows/contributors.yml)
+
 This repository is used to generate a knowledge base / book to help developers discover useful topics.  
 For now it is hosted here [here](https://xtrem-tdd.netlify.app/)
 
