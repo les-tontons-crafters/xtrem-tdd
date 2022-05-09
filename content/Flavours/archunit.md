@@ -72,9 +72,6 @@ public static class ArchUnitExtensions
             .LoadAssemblies(typeof(<ATypeFromAFirstProject>).Assembly)
             .Build();
     
-    public static GivenTypesConjunction TypesInAssembly() =>
-        Types().That().Are(Architecture.Types);
-
     public static void Check(this IArchRule rule) => rule.Check(Architecture);
 }
 ```
@@ -84,7 +81,10 @@ public static class ArchUnitExtensions
 
 ```csharp
 private static GivenMethodMembersThat Methods() 
-    => MethodMembers().That().AreNoConstructors().And();
+    => MethodMembers()
+        .That()
+        .AreNoConstructors()
+        .And();
 
 [Fact]
 public void NoGetMethodShouldReturnVoid() =>
