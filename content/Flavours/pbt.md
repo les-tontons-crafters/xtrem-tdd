@@ -1,3 +1,14 @@
+---
+categories:
+    - Design
+    - Testing
+authors:
+    - Yoan Thirion
+problems: 
+    - How can we write bullet proof code?
+    - How could we unbiased our tests and identify edge cases?
+---
+
 # Property-Based Testing (PBT)
 ## Description
 Property based testing relies on properties. It checks that a function, program or whatever system under test abides by a property.
@@ -13,8 +24,8 @@ It can definitely help you :
 - Have a better business understanding: identify business invariants require a deep business understanding
 
 ## Problems
-- `How can I write bullet proof code ?`
-- `How could we unbiased our tests and identify edge cases ?`
+- `How can I write bullet proof code?`
+- `How could we unbiased our tests and identify edge cases?`
 
 ### Example Based vs Property-Based
 #### Example-Based Testing

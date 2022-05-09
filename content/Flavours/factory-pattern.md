@@ -1,3 +1,12 @@
+---
+categories:
+    - Design
+authors:
+    - Guillaume Faas
+problems: 
+    - How to avoid direct object construction?
+---
+
 # Factory Pattern
 
 ## Description

@@ -1,3 +1,12 @@
+---
+categories:
+    - Design
+authors:
+    - Guillaume Faas
+problems: 
+    - How could we make our tests more understandable?
+---
+
 # Fluent Assertions
 
 ## Description
@@ -18,7 +27,7 @@ FluentAssertions is a set of extension methods that allow you to more naturally 
 - Provides better failure messages.
 
 ## Problems
-`How to avoid direct object construction?`
+`How could we make our tests more understandable?`
 
 ## Examples
 

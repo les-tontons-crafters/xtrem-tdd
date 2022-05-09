@@ -1,3 +1,13 @@
+---
+categories:
+    - Design
+authors:
+    - Yoan Thirion
+problems: 
+    - How could we design more robust code?
+    - How could we write more predictive code?
+---
+
 # Pure Functions
 ## Description
 `Pure functions don’t refer to any global state. Those functions do not produce any side effects (state changes).`
@@ -16,8 +26,8 @@ There are other benefits than testing from writing only pure functions :
 - **Lazy evaluation** : we can delay function evaluation only when it's actually needed
 
 ## Problems
-- `How could we design more robust code ?`
-- `How could we write more predictive code ?`
+- `How could we design more robust code?`
+- `How could we write more predictive code?`
 
 ## How to
 Take some habits :
