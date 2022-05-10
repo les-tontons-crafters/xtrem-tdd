@@ -92,6 +92,19 @@ public void NoGetMethodShouldReturnVoid() =>
         .HaveNameMatching("Get[A-Z].*", useRegularExpressions: true).Should()
         .NotHaveReturnType(typeof(void))
         .Check();
+
+private static GivenTypesConjunction DomainTypes() =>
+    Types()
+        .That()
+        .ResideInNamespace(Namespaces.Domain, true);
+
+[Fact]
+public void DomainCanOnlyAccessDomainItselfAndExceptions() =>
+    DomainTypes()
+        .Should()
+        .OnlyDependOnTypesThat()
+        .ResideInNamespace(Namespaces.Domain, true)
+        .Check();
 ```
 
 ## Constraint
