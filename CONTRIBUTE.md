@@ -39,7 +39,7 @@ Make it as visual as possible with subtitles, code examples, images
 ## Resources
 <Additional resources / curated resources (books, links)>
 ```
-- For now we have created 4 categories / tags : `Architecture`, `Design`, `Refactoring`, `Testing`
+- For now we have created 5 categories / tags : `Architecture`, `Design`, `Refactoring`, `Techniques`, `Testing`
 
 ### Run the site locally
 This website is generated through [gatsby](https://www.gatsbyjs.com/) :
