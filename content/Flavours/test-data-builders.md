@@ -1,13 +1,15 @@
 ---
 categories:
-- Testing
+    - Testing
 authors:
-- Julien VITTE
+    - Julien VITTE
 problems:
-- How to capture important architecture or design decision made along with its context and consequences ?
+    - How to decouple object creation from implementation in your tests?
+    - How to improve code readability in your tests?
+    - How to speed up writing your test setup?
 ---
 
-# Test data builders
+# Test Data Builders
 
 ## Description
 
@@ -15,7 +17,7 @@ The **Test Data Builder** pattern makes it easier to create input data or object
 
 ## Why
 
-Using **Test Data Builders** in your tests will 
+Using **Test Data Builders** in your tests will:
 
 * Facilitate writing tests by allowing easy creation of inputs or expected data.
 * Facilitate test maintainability by decoupling the creation of objects in tests, and isolating it in a single location (Single Responsibility Principle)
@@ -24,18 +26,18 @@ Using **Test Data Builders** in your tests will
 
 ## Problems
 
-* How to decouple object creation from implementation in your tests?
-* How to improve code readability in your tests?
-* How to speed up writing your test setup?
+* `How to decouple object creation from implementation in your tests?`
+* `How to improve code readability in your tests?`
+* `How to speed up writing your test setup?`
 
 ## How to
 
 ### The 4 rules of test data builders
 
-1. Has an instance variable for each constructor parameter
-2. Initialises its instance variables to commonly used or safe values
+1. Have an instance variable for each constructor parameter
+2. Initialize its instance variables to commonly used or safe values
 3. Has a `build` method that creates a new object using the values in its instance variables
-4. Has "chainable" public methods for overriding the values in its instance variables.
+4. Has `chainable` public methods for overriding the values in its instance variables
 
 
 ## Examples
@@ -97,27 +99,31 @@ public class CreatePropertyCommandBuilder
 }
 ```
 
-**Using your builder in the tests**
-- decouple object construction from its implementation, reducing refactoring effort on changes
-- explains data implied in the test case
+### Using your builder in the tests
+- Decouple object construction from its implementation, reducing refactoring effort on changes
+- Explains data implied in the test case
 
 ```csharp
 //Arrange
-var command = CreatePropertyCommandBuilder.APropertyCreation.WithLabel("Ma nouvelle propriété").Build();
+var command = CreatePropertyCommandBuilder
+                .APropertyCreation
+                .WithLabel("Ma nouvelle propriété")
+                .Build();
 
 // ...
 
 // Assert
-property.Label.Should().Be("Ma nouvelle propriété");
+property.Label
+    .Should()
+    .Be("Ma nouvelle propriété");
 ```
 
 ## Constraint
-During a code kata, replace redundant object creation by test data builders
+Replace redundant object creation by test data builders
 
 
 ## Resources
-
-*   [http://www.growing-object-oriented-software.com/](http://www.growing-object-oriented-software.com/)
-*   [https://blog.ploeh.dk/2017/08/15/test-data-builders-in-c/](https://blog.ploeh.dk/2017/08/15/test-data-builders-in-c/)
-*   [http://www.natpryce.com/articles/000714.html](http://www.natpryce.com/articles/000714.html)
-*   [https://www.arhohuttunen.com/test-data-builders/](https://www.arhohuttunen.com/test-data-builders/)
+- [Test Data Builders: an alternative to the Object Mother pattern](http://www.natpryce.com/articles/000714.html)
+- [Growing Object-Oriented Software Guided by Tests](http://www.growing-object-oriented-software.com/)
+- [Test Data Builders in C# by Mark Seemann](https://blog.ploeh.dk/2017/08/15/test-data-builders-in-c/)
+- [How to Create a Test Data Builder](https://www.arhohuttunen.com/test-data-builders/)
