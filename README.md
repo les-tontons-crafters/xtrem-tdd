@@ -30,5 +30,12 @@ We welcome contributions to this repository!
             <sub style="font-size:14px"><b>Guillaume Faas</b></sub>
         </a>
     </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/pitchart>
+            <img src=https://avatars.githubusercontent.com/u/2943883?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Julien VITTE/>
+            <br />
+            <sub style="font-size:14px"><b>Julien VITTE</b></sub>
+        </a>
+    </td>
 </tr>
 </table>
