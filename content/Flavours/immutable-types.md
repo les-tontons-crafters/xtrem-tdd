@@ -193,7 +193,7 @@ data class Player(val name: String, val cards: List<Card>) {
 ```
 
 - In `C#` it would look like this
-```c#
+```csharp
 public record Player(string Name, IReadOnlyList<Card> Cards)
 {
     public Player PickUp(Deck deck) 
