@@ -185,6 +185,25 @@ public record Player(String name, ImmutableList<Card> cards) {
 }
 ```
 
+- In a language like `kotlin` it would be even simpler to implement
+```kotlin
+data class Player(val name: String, val cards: List<Card>) {
+    fun pickUp(deck:  Deck): Player = copy(cards = cards + deck.takeCard())
+}
+```
+
+- In `C#` it would look like this
+```c#
+public record Player(string Name, IReadOnlyList<Card> Cards)
+{
+    public Player PickUp(Deck deck) 
+        => this with {Cards = Cards.Append(deck.TakeCard()).ToImmutableList()};
+}
+```
+
+Is not that beautiful and easy?
+![Star in the eyes](../images/beautiful.png)
+
 ## Constraint
 The next object you need to create must be an `immutable type` 
 
