@@ -58,10 +58,7 @@ Here's our CalculatorTest class. Notice that the test method is executing the pr
 ```
 @Test
 void should_add_two_numbers() {
-    var first = 2;
-    var second = 3;
-
-    calculator.add(first, second);
+    calculator.add(2, 3);
 }
 ```
 
@@ -78,13 +75,8 @@ Now we will add assertions to our test:
 ```
 @Test
 void should_add_two_numbers() {
-    var first = 2;
-    var second = 3;
-    var expectedResult = 5;
-
-    var result = calculator.add(first, second);
-
-    assertThat(result).isEqualTo(expectedResult);
+    var result = calculator.add(2, 3);
+    assertThat(result).isEqualTo(5);
 }
 ```
 
@@ -96,7 +88,7 @@ Furthermore, we can look at the details:
 
 ![Mutation Testing - High Score - Details](../images/mutation-testing-java-high-score-details.png)
 
-Source: The above code samples are extracts from the GitHub repository [Calculator Kata (Java)](https://github.com/valentinacupac/calculator-kata-java).
+Source: The above code samples are based on extracts from the GitHub repository [Calculator Kata (Java)](https://github.com/valentinacupac/calculator-kata-java).
 
 
 ## How to (.NET)
@@ -110,9 +102,7 @@ An example of failing mutation testing:
 [Fact]
 public void Should_add_two_numbers()
 {
-    var first = 2;
-    var second = 3;
-    calculator.Add(first, second);
+    calculator.Add(2, 3);
 }
 ```
 
@@ -124,14 +114,8 @@ Low mutation score:
 [Fact]
 public void Should_add_two_numbers()
 {
-    var first = 2;
-    var second = 3;
-
-    var expectedResult = 5;
-
-    var result = calculator.Add(first, second);
-
-    result.Should().Be(expectedResult);
+    var result = calculator.Add(2, 3);
+    result.Should().Be(5);
 }
 ```
 
@@ -139,7 +123,7 @@ High mutation score:
 
 ![Mutation Testing - High Score - Summary](../images/mutation-testing-dotnet-high-score.png)
 
-Source: The above code samples are extracts from the GitHub repository [Calculator Kata (.NET)](https://github.com/valentinacupac/calculator-kata-dotnet).
+Source: The above code samples are based on extracts from the GitHub repository [Calculator Kata (.NET)](https://github.com/valentinacupac/calculator-kata-dotnet).
 
 ## Constraint
 
