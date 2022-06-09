@@ -48,21 +48,7 @@ plugins {
 pitest {
     junit5PluginVersion = '0.15'
 }
-
 ```
-
-Here's our Calculator class:
-
-```
-
-public class Calculator {
-    public int add(int first, int second) {
-        return first + second;
-    }
-}
-
-```
-
 
 Here's our CalculatorTest class. Notice that the test method is executing the production method, but that there are no assertions regarding expected results at all!
 
@@ -70,25 +56,13 @@ Here's our CalculatorTest class. Notice that the test method is executing the pr
 
 
 ```
+@Test
+void should_add_two_numbers() {
+    var first = 2;
+    var second = 3;
 
-public class CalculatorTest {
-
-    private Calculator calculator;
-
-    @BeforeEach
-    void init() {
-        this.calculator = new Calculator();
-    }
-
-    @Test
-    void should_add_two_numbers() {
-        var first = 2;
-        var second = 3;
-
-        calculator.add(first, second);
-    }
+    calculator.add(first, second);
 }
-
 ```
 
 When we open up the scores produced by pitest, we can see a high score for code coverage, but a low score for mutation testing.
@@ -102,28 +76,16 @@ Furthermore, we can look at the details:
 Now we will add assertions to our test:
 
 ```
+@Test
+void should_add_two_numbers() {
+    var first = 2;
+    var second = 3;
+    var expectedResult = 5;
 
-public class CalculatorTest {
+    var result = calculator.add(first, second);
 
-    private Calculator calculator;
-
-    @BeforeEach
-    void init() {
-        this.calculator = new Calculator();
-    }
-
-    @Test
-    void should_add_two_numbers() {
-        var first = 2;
-        var second = 3;
-        var expectedResult = 5;
-
-        var result = calculator.add(first, second);
-
-        assertThat(result).isEqualTo(expectedResult);
-    }
+    assertThat(result).isEqualTo(expectedResult);
 }
-
 ```
 
 We can run mutation testing again. Now we will see a high score for mutation testing:
@@ -134,7 +96,7 @@ Furthermore, we can look at the details:
 
 ![Mutation Testing - High Score - Details](../images/mutation-testing-java-high-score-details.png)
 
-Source: The above code samples are extracts from the GitHub repository [Calculator Kata (Java)](https://github.com/valentinacupac/calculator-kata-java), [MIT License](https://github.com/valentinacupac/calculator-kata-java/blob/main/LICENSE).
+Source: The above code samples are extracts from the GitHub repository [Calculator Kata (Java)](https://github.com/valentinacupac/calculator-kata-java).
 
 
 ## How to (.NET)
@@ -144,17 +106,46 @@ You can add Mutation Testing in a .NET Project:
 An example of failing mutation testing:
 
 
-TODO: VC: Explain how to start
-TODO: VC: Make it as visual as possible with subtitles, code examples, images
+```
+[Fact]
+public void Should_add_two_numbers()
+{
+    var first = 2;
+    var second = 3;
+    calculator.Add(first, second);
+}
+```
+
+Low mutation score:
+
+![Mutation Testing - Low Score - Summary](../images/mutation-testing-dotnet-low-score.png)
+
+```
+[Fact]
+public void Should_add_two_numbers()
+{
+    var first = 2;
+    var second = 3;
+
+    var expectedResult = 5;
+
+    var result = calculator.Add(first, second);
+
+    result.Should().Be(expectedResult);
+}
+```
+
+High mutation score:
+
+![Mutation Testing - High Score - Summary](../images/mutation-testing-dotnet-high-score.png)
+
+Source: The above code samples are extracts from the GitHub repository [Calculator Kata (.NET)](https://github.com/valentinacupac/calculator-kata-dotnet).
 
 ## Constraint
-TODO: VC: How to add this technique as a constraint in a kata / workshop
 
 Run mutation testing after 100% code coverage score, to ensure that assertions are covered too.
 
 ## Resources
-TODO: VC: Additional resources / curated resources (books, links)
 
-https://pitest.org/
-
-
+- [Pitest (Java)](https://pitest.org/)
+- [Stryker (.NET)](https://stryker-mutator.io/docs/stryker-net/Introduction)
