@@ -93,11 +93,11 @@ public class CalculatorTest {
 
 When we open up the scores produced by pitest, we can see a high score for code coverage, but a low score for mutation testing.
 
-![Mutation Testing - Low Score - Summary](../images/mutation-testing-low-score-summary.png)
+![Mutation Testing - Low Score - Summary](../images/mutation-testing-java-low-score-summary.png)
 
 Furthermore, we can look at the details:
 
-![Mutation Testing - Low Score - Details](../images/mutation-testing-low-score-details.png)
+![Mutation Testing - Low Score - Details](../images/mutation-testing-java-low-score-details.png)
 
 Now we will add assertions to our test:
 
@@ -126,35 +126,15 @@ public class CalculatorTest {
 
 ```
 
-We can run mutation testing again:
+We can run mutation testing again. Now we will see a high score for mutation testing:
 
+![Mutation Testing - High Score - Summary](../images/mutation-testing-java-high-score-summary.png)
 
+Furthermore, we can look at the details:
 
+![Mutation Testing - High Score - Details](../images/mutation-testing-java-high-score-details.png)
 
-
-We then run mutation testing:
-
-```
-./gradlew pitest
-```
-
-
-
-
-
-
-
-To make sure it runs, run pitest
-
-```
-./gradlew pitest
-```
-
-An example of failing mutation testing:
-
-
-
-- 
+Source: The above code samples are extracts from the GitHub repository [Calculator Kata (Java)](https://github.com/valentinacupac/calculator-kata-java), [MIT License](https://github.com/valentinacupac/calculator-kata-java/blob/main/LICENSE).
 
 
 ## How to (.NET)
