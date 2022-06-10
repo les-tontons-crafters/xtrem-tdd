@@ -16,11 +16,14 @@ Mutation Testing is a technique which enables us to evaluate the quality of a te
 - In a high quality test suite, mutating the source code results in failing test(s), thereby killing the mutant. 
 - In a low quality test suite, the tests still pass even after the mutation, thereby the mutant has survived. 
 
-Mutation score is the percentage of mutants killed, i.e. Killed Mutant Count / Total Mutant Count * 100. 
-- A score of 100% is a good indicator for test suite quality. It indicates that if we ever have a regression bug in our code, that it will be able to be detected by the test.
-- Any score less than 100% indicates gaps in the test suite, it indicates missing behavioural assertions. It means that code exhibits behaviour which is not covered by any test.
+Mutation score is the percentage of mutants killed, i.e. `Killed Mutant Count / Total Mutant Count * 100`. 
+- A score of 100% is a good indicator for test suite quality.
+    - It indicates that if we ever have a regression bug in our code, that it will be able to be detected by the test.
+- Any score less than 100% indicates gaps in the test suite
+    - It indicates missing behavioural assertions
+    - It means that code exhibits behaviour which is not covered by any test
 
-## Why ?
+## Why?
 
 Code Coverage metrics (e.g. line coverage, branch coverage) only provide feedback regarding the percentage of code executed by the tests. Unfortunately, they do not provide us feedback regarding the quality of our test suite.
 
@@ -30,8 +33,8 @@ Mutation Testing helps us overcome some problems faced when using classical Code
 
 
 ## Problems
-`How to evaluate the quality of a test suite?`
-`How to overcome the problems of Code Coverage metrics?`
+- `How to evaluate the quality of a test suite?`
+- `How to overcome the problems of Code Coverage metrics?`
 
 ## How to
 
@@ -49,7 +52,7 @@ The following example illustrates usage of Pitest with Gradle and JUnit5.
 
 Pitest is registered within build.gradle (versions shown are the current versions as at time of writing):
 
-```
+```groovy
 plugins {
     id 'info.solidsoft.pitest' version '1.7.4'
 }
@@ -61,7 +64,7 @@ pitest {
 
 Suppose we have a poorly-written test. This test is executing code, but there are no assertions regarding expected behaviour (assertion-free testing):
 
-```
+```java
 @Test
 void should_add_two_numbers() {
     calculator.add(2, 3);
@@ -76,7 +79,7 @@ When we run pitest, we get a high score for Line Coverage but a low score for Mu
 
 Suppose we have a well-written test, which has appropriate assertions regarding expected behaviour:
 
-```
+```java
 @Test
 void should_add_two_numbers() {
     var result = calculator.add(2, 3);
@@ -98,13 +101,13 @@ We can run Mutation Testing in .NET using Stryker.NET.
 
 The Stryker tool can be installed as follows:
 
-```
+```bash
 dotnet tool install -g dotnet-stryker
 ```
 
 Suppose we have a poorly-written test. This test is executing code, but there are no assertions regarding expected behaviour (assertion-free testing):
 
-```
+```csharp
 [Fact]
 public void Should_add_two_numbers()
 {
@@ -118,7 +121,7 @@ When we run Stryker, we get a low Mutation Score:
 
 Suppose we have a well-written test, which has appropriate assertions regarding expected behaviour:
 
-```
+```csharp
 [Fact]
 public void Should_add_two_numbers()
 {
