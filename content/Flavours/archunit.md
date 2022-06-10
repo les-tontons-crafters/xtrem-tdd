@@ -4,7 +4,7 @@ categories:
 authors:
     - Yoan Thirion
 problems: 
-    - How to capture important architecture or design decision made along with its context and consequences ?
+    - How to capture important architecture or design decision made along with its context and consequences?
 ---
 
 # Architecture Unit Tests
@@ -13,7 +13,7 @@ problems:
 Architecture Unit Tests are tests for checking the architecture you are using is respected at any time. 
 Such tool can check dependencies between packages and classes, layers and slices, check for cyclic dependencies and more. 
 
-## Why ?
+## Why?
 Those kind of tests can act as a safety net that helps teams (and newjoiners) to :
 - Maintain clear architecture boundaries
     - Your team rules can easily be broken by inadvertence

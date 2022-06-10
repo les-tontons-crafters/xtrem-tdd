@@ -23,7 +23,7 @@ problems:
 ## Description
 <Describe in a few line the practice / technique>
 
-## Why ?
+## Why?
 <Explain the `WHY`, how it can be useful>
 
 ## Problems

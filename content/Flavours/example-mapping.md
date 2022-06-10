@@ -14,7 +14,7 @@ problems:
 Example mapping is a technique for gaining clarity around the acceptance criteria for a given User Story. 
 It is based on the idea that multiple examples of specific cases convey information better than a single bad abstraction of a concept.
 
-## Why ?
+## Why?
 Example mapping should be used with the right people in the room to be able to explain:
 - Business rules
 - Example scenarios

@@ -17,7 +17,7 @@ It is, in fact, a **collective effort** from **dozens of passionate experts** to
 
 This site will be the perfect companion for your developer journey.
 
-### For who ?
+### For who?
 This site is ideal for :
 - Programmers who lack guidance and mentoring
 - Aspirant Software Craftsmen keen to learn new practices continuously

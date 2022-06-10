@@ -64,7 +64,7 @@ var command = new CreatePropertyCommand ("label", true, false, true, new string[
 
 - Every time your object creation will change, you have to fix all tests the class is implied
 - What does the `false` value means?!?
-- What if the constructor arguments were not primitive types but required the creation of other objects ?
+- What if the constructor arguments were not primitive types but required the creation of other objects?
 
 ### With test data builders
 

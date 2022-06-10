@@ -21,7 +21,7 @@ These two variations aims towards the same goal: avoid direct object constructio
 ### Abstract Factory
 ![Abstract Factory UML Diagram](https://upload.wikimedia.org/wikipedia/commons/a/aa/W3sDesign_Abstract_Factory_Design_Pattern_UML.jpg "Abstract Factory UML Diagram")
 
-## Why ?
+## Why?
 Avoiding direct object construction allows us to abstract the decision-making process from the calling class. The benefits are numerous:
 - The calling class do not need to know how to construct a component. The factory holds this information.
 - Open/Closed principle.

@@ -12,7 +12,7 @@ problems:
 ## Description
 `Pure functions don’t refer to any global state. Those functions do not produce any side effects (state changes).`
 
-## Why ?
+## Why?
 They are easier to **test** because of these properties :
 1. You can see all the input in the argument list
 2. The execution is deterministic : the same input will always get the same output

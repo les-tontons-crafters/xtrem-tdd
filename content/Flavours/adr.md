@@ -4,7 +4,7 @@ categories:
 authors:
     - Yoan Thirion
 problems: 
-    - How to capture important architecture or design decision made along with its context and consequences ?
+    - How to capture important architecture or design decision made along with its context and consequences?
 ---
 
 # Architecture Decision Record (ADR)
@@ -16,7 +16,7 @@ An architecture decision record (ADR) is a document that captures an important a
 
 The collection of all ADRs created and maintained for a particular project, product or organization is called an Architecture Decision Log (**ADL**)
 
-## Why ?
+## Why?
 When adopting ADRs you will observe many benefits :
 - **Alignment** : ADRs make it easier to structure design discussions for teams. It creates instant alignment on best practices. It has the benefit of removing duplicative efforts, making code reusable across projects and reducing discussions regarding the past (because each decision has clearly been justified).
 - **On-boarding** : Future team members are able to read a history of decisions and quickly get up to speed on how and why a decision is made and its related impact.
@@ -24,7 +24,7 @@ When adopting ADRs you will observe many benefits :
 `ADRs will save you from future discussions like: why did we implement? ... it's historic...`
 
 ## Problems
-`How to capture important architecture or design decision made along with its context and consequences ?`
+`How to capture important architecture or design decision made along with its context and consequences?`
 
 ## How to
 - Define a small process with your team mates

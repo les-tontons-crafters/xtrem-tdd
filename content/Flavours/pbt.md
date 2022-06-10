@@ -18,7 +18,7 @@ An invariant is something that will always be true no matter what data you provi
 
 `It is important to note that a successful property test does not mean that the implementation is correct, it means that the framework has not been able to fault the implementation.`
 
-## Why ?
+## Why?
 It can definitely help you :
 - Identify Edge-cases that we did not think of (nulls, negative numbers, weird characters, ...)
 - Have a better business understanding: identify business invariants require a deep business understanding
@@ -62,7 +62,7 @@ With PBT, the promise is to be on the top right of our previous quadrant :
 
 ![PBT quadrant](../images/pbt-quadrant.png)
 
-### What does it mean if a test fail ?
+### What does it mean if a test fail?
 If the framework manages to find an edge-case, there are 3 possibilities :
 ```text
 ✅ The production code is not correct

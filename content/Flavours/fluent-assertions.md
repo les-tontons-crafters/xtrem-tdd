@@ -20,7 +20,7 @@ Does any of these situations seem familiar?
 - Which value is expected and which one is the result.
 - You encountered a failure message that provide no valuable information.
 
-## Why ?
+## Why?
 FluentAssertions is a set of extension methods that allow you to more naturally specify the expected outcome of a TDD or BDD-style unit tests.
 - Makes assertions easier to write.
 - Helps to reveal intention during the assertion phase.
