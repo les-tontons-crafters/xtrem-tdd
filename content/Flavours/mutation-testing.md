@@ -11,15 +11,22 @@ problems:
 # Mutation Testing
 ## Description
 
-Mutation Testing is a technique which enables us to evaluate the quality of a test suite. It works by mutating the source code and then running the tests to check whether the tests can detect the mutant. In a high quality test suite, mutating the source code results in failing test(s), thereby killing the mutation. In a low quality test suite, the tests still pass even after the mutation, thereby the mutant has survived. Mutation score is the percentage of mutants killed, i.e. Killed Mutant Count / Total Mutant Count * 100. A score of 100% is a good indicator for test suite quality. Any score less than 100% indicates gaps in the test suite.
+Mutation Testing is a technique which enables us to evaluate the quality of a test suite. It works by mutating the source code and then running the tests to check whether the tests can detect the mutant. Mutating source code implies making a small change in the source code, for example by changing conditions, inverting negatives, etc.
+
+- In a high quality test suite, mutating the source code results in failing test(s), thereby killing the mutant. 
+- In a low quality test suite, the tests still pass even after the mutation, thereby the mutant has survived. 
+
+Mutation score is the percentage of mutants killed, i.e. Killed Mutant Count / Total Mutant Count * 100. 
+- A score of 100% is a good indicator for test suite quality. It indicates that if we ever have a regression bug in our code, that it will be able to be detected by the test.
+- Any score less than 100% indicates gaps in the test suite, it indicates missing behavioral assertions. It means that code exhibits behavior which is not covered by any test.
 
 ## Why ?
 
-Code Coverage (e.g. line coverage, branch coverage) only provides feedback regarding the percentage of code executed by the tests, but it does not provide us with feedback regarding the quality of our test suite, whether our tests are able to detect bugs.
+Code Coverage metrics (e.g. line coverage, branch coverage) only provide feedback regarding the percentage of code executed by the tests. Unfortunately, they do not provide us feedback regarding the quality of our test suite.
 
-In the case of Assertion Free Testing, whereby there are no assertions in the tests, it is possible to get 
+In the case of Assertion Free Testing, whereby there are no assertions in the tests, it is possible to get a high Code Coverage score (even 100%) but we're not actually testing anything.
 
-Mutation Testing helps us overcome some problems faced when using classical Code Coverage Metrics. 
+Mutation Testing helps us overcome some problems faced when using classical Code Coverage Metrics - because Mutation Testing is able to identify holes in behavioral assertions. In the case of Assertion Free Testing (or in the case of partial assertion), the Mutation Score will be low, thereby indicating a low quality test suite. 
 
 
 ## Problems
@@ -28,17 +35,19 @@ Mutation Testing helps us overcome some problems faced when using classical Code
 
 ## How to
 
-We will showcase how to add Mutation Testing in your Java and .NET projects.
+We will showcase how to add Mutation Testing in Java and .NET projects.
 - Write an assertion-free test, which runs the code but no assertions
 - Run code coverage metrics to show 100% code coverage
-- Run mutation testing to show a less than 100% mutation score
-- Retroactively add assertions, re-run mutation testing until you get a 100% mutation test score
+- Run mutation testing to show 0% mutation score
+- Retroactively add the missing assertions and achieve 100% mutation score
 
 ## How to (Java)
 
-You can add Mutation Testing in a Java Project. The following example shows it with Gradle and JUnit5 (though similar principles apply for Maven too).
+We can run Mutation Testing in Java using the Pitest plugin.
 
-Include pitest in build.gradle (version shown is the current latest, you can replace it):
+The following example illustrates usage of Pitest with Gradle and JUnit5.
+
+Pitest is registered within build.gradle (versions shown are the current versions as at time of writing):
 
 ```
 plugins {
@@ -50,10 +59,7 @@ pitest {
 }
 ```
 
-Here's our CalculatorTest class. Notice that the test method is executing the production method, but that there are no assertions regarding expected results at all!
-
- In this example, to illustrate assertion-free testing, we will not have any assertions regarding expected results, but only executing the code.
-
+Suppose we have a poorly-written test. This test is executing code, but there are no assertions regarding expected behavior (assertion-free testing):
 
 ```
 @Test
@@ -62,15 +68,13 @@ void should_add_two_numbers() {
 }
 ```
 
-When we open up the scores produced by pitest, we can see a high score for code coverage, but a low score for mutation testing.
+When we run pitest, we get a high score for Line Coverage but a low score for Mutation Coverage:
 
 ![Mutation Testing - Low Score - Summary](../images/mutation-testing-java-low-score-summary.png)
 
-Furthermore, we can look at the details:
-
 ![Mutation Testing - Low Score - Details](../images/mutation-testing-java-low-score-details.png)
 
-Now we will add assertions to our test:
+Suppose we have a well-written test, which has appropriate assertions regarding expected behavior:
 
 ```
 @Test
@@ -80,23 +84,25 @@ void should_add_two_numbers() {
 }
 ```
 
-We can run mutation testing again. Now we will see a high score for mutation testing:
+When we run pitest, we get a high score for Line Coverage a high score for Mutation Coverage:
 
 ![Mutation Testing - High Score - Summary](../images/mutation-testing-java-high-score-summary.png)
-
-Furthermore, we can look at the details:
 
 ![Mutation Testing - High Score - Details](../images/mutation-testing-java-high-score-details.png)
 
 Source: The above code samples are based on extracts from the GitHub repository [Calculator Kata (Java)](https://github.com/valentinacupac/calculator-kata-java).
 
-
 ## How to (.NET)
 
-You can add Mutation Testing in a .NET Project:
+We can run Mutation Testing in .NET using Stryker.NET.
 
-An example of failing mutation testing:
+The Stryker tool can be installed as follows:
 
+```
+dotnet tool install -g dotnet-stryker
+```
+
+Suppose we have a poorly-written test. This test is executing code, but there are no assertions regarding expected behavior (assertion-free testing):
 
 ```
 [Fact]
@@ -106,9 +112,11 @@ public void Should_add_two_numbers()
 }
 ```
 
-Low mutation score:
+When we run Stryker, we get a low Mutation Score:
 
 ![Mutation Testing - Low Score - Summary](../images/mutation-testing-dotnet-low-score.png)
+
+Suppose we have a well-written test, which has appropriate assertions regarding expected behavior:
 
 ```
 [Fact]
@@ -119,7 +127,7 @@ public void Should_add_two_numbers()
 }
 ```
 
-High mutation score:
+When we run Stryker, we get a high Mutation Score:
 
 ![Mutation Testing - High Score - Summary](../images/mutation-testing-dotnet-high-score.png)
 
@@ -127,9 +135,21 @@ Source: The above code samples are based on extracts from the GitHub repository 
 
 ## Constraint
 
-Run mutation testing after 100% code coverage score, to ensure that assertions are covered too.
+To check the quality of your test suite:
+- Run Code Coverage, and write any missing tests to ensure you have a high Code Coverage
+- Run Mutation Testing, and write any missing tests to ensure you have a high Mutation Score
+
+The following should be noted:
+- If you are applying TDD, you will naturally reach high scores for both the metrics above
+- If you are not applying TDD, you will likley get low metrics (especially for Mutation Testing), and will need to put more effort retroactively to get a high Mutation Score
+- The reason for running Code Coverage metrics before running Mutation Testing metrics is because Code Coverage metrics are computed faster, and Mutation Testing takes longer to run
 
 ## Resources
 
+The following are used for running Mutation Testing:
 - [Pitest (Java)](https://pitest.org/)
 - [Stryker (.NET)](https://stryker-mutator.io/docs/stryker-net/Introduction)
+
+The following are the GitHub code samples used in this page:
+- [Calculator Kata (Java)](https://github.com/valentinacupac/calculator-kata-java)
+- [Calculator Kata (.NET)](https://github.com/valentinacupac/calculator-kata-dotnet)
