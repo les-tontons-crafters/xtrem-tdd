@@ -18,7 +18,7 @@ Mutation Testing is a technique which enables us to evaluate the quality of a te
 
 Mutation score is the percentage of mutants killed, i.e. Killed Mutant Count / Total Mutant Count * 100. 
 - A score of 100% is a good indicator for test suite quality. It indicates that if we ever have a regression bug in our code, that it will be able to be detected by the test.
-- Any score less than 100% indicates gaps in the test suite, it indicates missing behavioral assertions. It means that code exhibits behavior which is not covered by any test.
+- Any score less than 100% indicates gaps in the test suite, it indicates missing behavioural assertions. It means that code exhibits behaviour which is not covered by any test.
 
 ## Why ?
 
@@ -26,7 +26,7 @@ Code Coverage metrics (e.g. line coverage, branch coverage) only provide feedbac
 
 In the case of Assertion Free Testing, whereby there are no assertions in the tests, it is possible to get a high Code Coverage score (even 100%) but we're not actually testing anything.
 
-Mutation Testing helps us overcome some problems faced when using classical Code Coverage Metrics - because Mutation Testing is able to identify holes in behavioral assertions. In the case of Assertion Free Testing (or in the case of partial assertion), the Mutation Score will be low, thereby indicating a low quality test suite. 
+Mutation Testing helps us overcome some problems faced when using classical Code Coverage Metrics - because Mutation Testing is able to identify holes in behavioural assertions. In the case of Assertion Free Testing (or in the case of partial assertion), the Mutation Score will be low, thereby indicating a low quality test suite. 
 
 
 ## Problems
@@ -59,7 +59,7 @@ pitest {
 }
 ```
 
-Suppose we have a poorly-written test. This test is executing code, but there are no assertions regarding expected behavior (assertion-free testing):
+Suppose we have a poorly-written test. This test is executing code, but there are no assertions regarding expected behaviour (assertion-free testing):
 
 ```
 @Test
@@ -74,7 +74,7 @@ When we run pitest, we get a high score for Line Coverage but a low score for Mu
 
 ![Mutation Testing - Low Score - Details](../images/mutation-testing-java-low-score-details.png)
 
-Suppose we have a well-written test, which has appropriate assertions regarding expected behavior:
+Suppose we have a well-written test, which has appropriate assertions regarding expected behaviour:
 
 ```
 @Test
@@ -102,7 +102,7 @@ The Stryker tool can be installed as follows:
 dotnet tool install -g dotnet-stryker
 ```
 
-Suppose we have a poorly-written test. This test is executing code, but there are no assertions regarding expected behavior (assertion-free testing):
+Suppose we have a poorly-written test. This test is executing code, but there are no assertions regarding expected behaviour (assertion-free testing):
 
 ```
 [Fact]
@@ -116,7 +116,7 @@ When we run Stryker, we get a low Mutation Score:
 
 ![Mutation Testing - Low Score - Summary](../images/mutation-testing-dotnet-low-score.png)
 
-Suppose we have a well-written test, which has appropriate assertions regarding expected behavior:
+Suppose we have a well-written test, which has appropriate assertions regarding expected behaviour:
 
 ```
 [Fact]
