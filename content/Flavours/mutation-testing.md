@@ -73,9 +73,9 @@ void should_add_two_numbers() {
 
 When we run pitest, we get a high score for Line Coverage but a low score for Mutation Coverage:
 
-![Mutation Testing - Low Score - Summary](../images/mutation-testing-java-low-score-summary.png)
+![Mutation Testing - Low Score - Summary](../../images/mutation-testing-java-low-score-summary.png)
 
-![Mutation Testing - Low Score - Details](../images/mutation-testing-java-low-score-details.png)
+![Mutation Testing - Low Score - Details](../../images/mutation-testing-java-low-score-details.png)
 
 Suppose we have a well-written test, which has appropriate assertions regarding expected behaviour:
 
@@ -89,9 +89,9 @@ void should_add_two_numbers() {
 
 When we run pitest, we get a high score for Line Coverage a high score for Mutation Coverage:
 
-![Mutation Testing - High Score - Summary](../images/mutation-testing-java-high-score-summary.png)
+![Mutation Testing - High Score - Summary](../../images/mutation-testing-java-high-score-summary.png)
 
-![Mutation Testing - High Score - Details](../images/mutation-testing-java-high-score-details.png)
+![Mutation Testing - High Score - Details](../../images/mutation-testing-java-high-score-details.png)
 
 Source: The above code samples are based on extracts from the GitHub repository [Calculator Kata (Java)](https://github.com/valentinacupac/calculator-kata-java).
 
@@ -117,7 +117,7 @@ public void Should_add_two_numbers()
 
 When we run Stryker, we get a low Mutation Score:
 
-![Mutation Testing - Low Score - Summary](../images/mutation-testing-dotnet-low-score.png)
+![Mutation Testing - Low Score - Summary](../../images/mutation-testing-dotnet-low-score.png)
 
 Suppose we have a well-written test, which has appropriate assertions regarding expected behaviour:
 
@@ -132,7 +132,7 @@ public void Should_add_two_numbers()
 
 When we run Stryker, we get a high Mutation Score:
 
-![Mutation Testing - High Score - Summary](../images/mutation-testing-dotnet-high-score.png)
+![Mutation Testing - High Score - Summary](../../images/mutation-testing-dotnet-high-score.png)
 
 Source: The above code samples are based on extracts from the GitHub repository [Calculator Kata (.NET)](https://github.com/valentinacupac/calculator-kata-dotnet).
 

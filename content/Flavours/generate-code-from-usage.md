@@ -38,18 +38,18 @@ Depending on your IDE and Operating System shortcuts can differ but you should b
 ### Example
 - Imagine we want to implement a test like this
 
-![Scenario example](../images/generate-code-scenario.png)
+![Scenario example](../../images/generate-code-scenario.png)
 
 - We can create `Hunter` type directly from here
     - Go on the `red` part
     - From `Rider` contextual we can display available actions
     - You have the same kind of actions in every `good` IDE
 
-![Create Hunter](../images/generate-code-contextual-action.png)
+![Create Hunter](../../images/generate-code-contextual-action.png)
 
 - We can then create our methods directly from our tests as well
 
-![Create Method](../images/generate-code-method.png)
+![Create Method](../../images/generate-code-method.png)
 
 ## Constraint
 You are authorized to create new code `only from usage` (from a test or production code)
