@@ -189,8 +189,8 @@ Divide(9,
 > Other alternatives exist and can depend on your programming language / paradigm
 
 ## Constraint
-- If you already use `Exception` to handle `errors` remove them using one of the alternative presented or another
-- If not, think about a first edge that you are not supporting yet and use one of the alternative presented to manage it
+- If are already using `Exceptions` to handle `errors` remove them using one of the alternative presented or another
+- If not, think about a first edge that you do not support yet and use one of the alternative presented to manage it
 
 ## Resources
 - [Don't throw exceptions in C#. Do this instead](https://youtu.be/a1ye9eGTB98) by Nick Chapsas
