@@ -60,7 +60,7 @@ public static Result<double, string> Divide(double numerator, double denominator
         : Success(numerator / denominator);
 ```
 
-- Here is the simple `Result` type created as an example:
+- Its basic implementation
 ```csharp
 public record Result<TSuccess, TFailure>
     where TFailure : class
@@ -92,7 +92,7 @@ public record Result<TSuccess, TFailure>
 
 - As a consumer / caller of this method we now have to deal with the return type:
     - We have to be exhaustive in the treatment of the result
-    - Our method does not contain lie anymore and express explicitly that the opration can fail: `double -> double -> Result`
+    - Our method does not contain lie anymore and express explicitly that the operation can fail: `double -> double -> Result`
 
 ```csharp
 result.Match(success => Console.WriteLine($"Success {success}"),
@@ -154,7 +154,7 @@ var result = Divide(9, 3d.ToNonZeroDouble());
 
 ![Hollywood principle](../../images/hollywood-principle.jpg)
 
-- One of the most ppopular way to implement this principle is to use `events` or `callbacks`
+- One of the most popular way to implement this principle is to use `events` or `callbacks`
 - The basic idea behind it is `let the caller decide what happens next`
 
 - Let's use callbacks / continuation functions in our `Divide` method
@@ -189,7 +189,7 @@ Divide(9,
 > Other alternatives exist and can depend on your programming language / paradigm
 
 ## Constraint
-- If are already using `Exceptions` to handle `errors` remove them using one of the alternative presented or another
+- If you are already using `Exceptions` to handle `errors` remove them using one of the alternative presented or another
 - If not, think about a first edge that you do not support yet and use one of the alternative presented to manage it
 
 ## Resources
