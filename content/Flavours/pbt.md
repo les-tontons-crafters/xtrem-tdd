@@ -9,7 +9,7 @@ problems:
     - How could we unbiased our tests and identify edge cases?
 ---
 
-# Property-Based Testing (PBT)
+# Property-Based Testing
 ## Description
 Property based testing relies on properties. It checks that a function, program or whatever system under test abides by a property.
 To explain it as simple as possible : we identify and test invariants.

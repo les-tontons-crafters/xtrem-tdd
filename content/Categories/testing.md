@@ -1,5 +1,5 @@
 # Testing
 - [[Fluent Assertions]]
-- [[Property-Based Testing (PBT)]]
+- [[Property-Based Testing]]
 - [[Test Data Builders]]
 - [[Mutation Testing]]
