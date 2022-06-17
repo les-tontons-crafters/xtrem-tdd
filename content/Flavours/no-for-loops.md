@@ -207,7 +207,7 @@ private fun filterByTag(searchedTag: String): List<Post> =
         .filter { it.tags.contains(searchedTag) }
 ```
 
-> In this example, we should also encapsulate some logic inside `Blog` and `Post` classes insted of envying data from them in the `Filter` method
+> In this example, we should also encapsulate some logic inside `Blog` and `Post` classes instead of envying data from them in the `Filter` method
 Let's keep this discussion for another flavour 😉
 
 ## Constraint
