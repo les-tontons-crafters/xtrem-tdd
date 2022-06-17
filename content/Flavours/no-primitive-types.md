@@ -17,7 +17,7 @@ problems:
 [Primitive types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types) are very general and could represent anything.
 For example, an `int` could represent an identifier, a quantity, a number of elements or an index. Also, a `string` could represent a name, a description, an email or an address.
 
-> But I named my variable `string email = ...` so it's a big deal. I'm exposing the meaning of the variable.
+> But I named my variable `string email = ...` so it's not a big deal. I'm exposing the meaning of the variable.
 
 Right? ...
 
