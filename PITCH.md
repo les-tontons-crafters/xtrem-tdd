@@ -12,7 +12,7 @@ It aims to provide solutions, ideas and resources to solve problems we've observ
 - I found my tests not providing a reliable output, debugging is always mandatory
 - And much more...
 
-While there can be discussions about choices and preferences, this book does not represent the opinion of an individual.
+While there can be discussions about choices and preferences, this site does not represent the opinion of an individual.
 It is, in fact, a **collective effort** from **dozens of passionate experts** towards the same goal, accumulating more than a hundred years of professional experience together.
 
 This site will be the perfect companion for your developer journey.

@@ -1,10 +1,11 @@
 # Xtrem TDD
 [![Contributors](https://github.com/les-tontons-crafters/xtrem-tdd/actions/workflows/contributors.yml/badge.svg)](https://github.com/les-tontons-crafters/xtrem-tdd/actions/workflows/contributors.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f4576573-6d09-4020-97ed-8ffbb59dfa7a/deploy-status)](https://app.netlify.com/sites/xtrem-tdd/deploys)
 
-This repository is used to generate a knowledge base / book to help developers discover useful topics.  
+This repository is used to generate a knowledge base to help developers discover useful topics.  
 For now it is hosted here [here](https://xtrem-tdd.netlify.app/)
 
-![Value proposition canvas](static/images/value-proposition-canvas.jpg)
+![Xtrem TDD](static/images/xtrem-tdd.png)
 
 More explanations [here](PITCH.md)
 
