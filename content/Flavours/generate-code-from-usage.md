@@ -20,9 +20,8 @@ problems:
 - Your IDE is more reliable and create code faster than us, so it will avoid you a lot of mistales
 
 ## Problems
-
-* `How can I be more efficient when using my IDE?`
-* `How may I avoid mistakes when writing code?`
+    - How can I be more efficient when using my IDE?
+    - How may I avoid mistakes when writing code?
 
 ## How to
 Red stuff appears for undefined identifiers. 

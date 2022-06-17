@@ -30,9 +30,9 @@ An immutable type sets the property or state of the object as read only because 
 Like everything, immutability comes with a cost: `whenever you do need a modified object of that new type you must suffer the overhead of a new object creation` (causing more frequent garbage collections)
 
 ## Problems
-- `How could I represent only valid state object?`
-- `How may I write more predictable code?`
-- `How could I write thread-safe code?`
+    - How could I represent only valid state object?
+    - How may I write more predictable code?
+    - How could I write thread-safe code?
 
 ## How to
 For creating an immutable type, we have to think about its properties or variables which will never change the value(s) after assigning the first time. 

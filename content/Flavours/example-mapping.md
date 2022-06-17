@@ -24,8 +24,8 @@ You need to have business experts and technical knowledge people that can ask th
 It should be used as a tool to ensure that the team appropriately understands what is expected of the story, and to get the stakeholders involved in the development of acceptance criteria.
 
 ## Problems
-- `How to build a shared understanding on functionalities?`
-- `How to avoid misunderstandings, incorrect assumptions when developing new functionalities?`
+    - How to build a shared understanding on functionalities?
+    - How to avoid misunderstandings, incorrect assumptions when developing new functionalities?
 
 ## How to
 1. Business experts (PO or BA) present the problem to solve

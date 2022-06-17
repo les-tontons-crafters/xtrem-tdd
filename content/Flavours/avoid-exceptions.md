@@ -32,8 +32,8 @@ We should avoid avoid the intensive usage of `Exceptions` for:
 - Keeping them for exceptional situations
 
 ## Problems
-- `How can I create more explicit methods or functions?`
-- `How can I deal with errors in code?`
+    - How can I create more explicit methods or functions?
+    - How can I deal with errors in code?
 
 ## How to
 - We have different options to avoid exceptions

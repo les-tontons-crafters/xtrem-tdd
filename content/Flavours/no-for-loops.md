@@ -20,8 +20,8 @@ There are a lot of advantages of using specific methods over generic `for` or `f
 - Helps you think in terms of functional programming
 
 ## Problems
-- `How may I reduce code complexity?`
-- `How may I write more understandable/readable code?`
+    - How may I reduce code complexity?
+    - How may I write more understandable/readable code?
 
 ## How to
 Let's take an example, imagine we want to identify which `Post` contained in `Blog` contains a given `Tag`

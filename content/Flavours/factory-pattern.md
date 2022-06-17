@@ -31,7 +31,7 @@ Avoiding direct object construction allows us to abstract the decision-making pr
 - Reduces duplication.
 
 ## Problems
-`How to avoid direct object construction?`
+    How to avoid direct object construction?
 
 ## Examples
 Considering an `IShape` interface with several implementations such as `Circle`, `Rectangle` and `Square`.

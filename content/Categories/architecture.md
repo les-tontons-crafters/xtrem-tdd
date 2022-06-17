@@ -1,3 +1,3 @@
 # Architecture
-- [[Architecture Decision Record (ADR)]] 
+- [[Architecture Decision Record]] 
 - [[Architecture Unit Tests]] 

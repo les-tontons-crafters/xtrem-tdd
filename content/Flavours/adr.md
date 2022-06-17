@@ -7,7 +7,7 @@ problems:
     - How to capture important architecture or design decision made along with its context and consequences?
 ---
 
-# Architecture Decision Record (ADR)
+# Architecture Decision Record
 
 ## Description
 An architecture decision record (ADR) is a document that captures an important architecture decision made along with its context and consequences. You can capture any kind of decision :
@@ -24,7 +24,7 @@ When adopting ADRs you will observe many benefits :
 `ADRs will save you from future discussions like: why did we implement? ... it's historic...`
 
 ## Problems
-`How to capture important architecture or design decision made along with its context and consequences?`
+    How to capture important architecture or design decision made along with its context and consequences?
 
 ## How to
 - Define a small process with your team mates

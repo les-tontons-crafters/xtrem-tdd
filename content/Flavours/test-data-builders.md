@@ -25,10 +25,9 @@ Using **Test Data Builders** in your tests will:
 * Facilitate the readability of the tests by explaining only the data implied in the use case
 
 ## Problems
-
-* `How to decouple object creation from implementation in your tests?`
-* `How to improve code readability in your tests?`
-* `How to speed up writing your test setup?`
+    - How to decouple object creation from implementation in your tests?
+    - How to improve code readability in your tests?
+    - How to speed up writing your test setup?
 
 ## How to
 

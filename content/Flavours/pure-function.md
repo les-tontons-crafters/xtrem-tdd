@@ -26,8 +26,8 @@ There are other benefits than testing from writing only pure functions :
 - **Lazy evaluation** : we can delay function evaluation only when it's actually needed
 
 ## Problems
-- `How could we design more robust code?`
-- `How could we write more predictive code?`
+    - How could we design more robust code?
+    - How could we write more predictive code?
 
 ## How to
 Take some habits :

@@ -33,8 +33,8 @@ Mutation Testing helps us overcome some problems faced when using classical Code
 
 
 ## Problems
-- `How to evaluate the quality of a test suite?`
-- `How to overcome the problems of Code Coverage metrics?`
+    - How to evaluate the quality of a test suite?
+    - How to overcome the problems of Code Coverage metrics?
 
 ## How to
 

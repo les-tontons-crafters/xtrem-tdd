@@ -23,7 +23,7 @@ Those kind of tests can act as a safety net that helps teams (and newjoiners) to
     - Out-of the box integrated in your test suite and so your CI 😉
 
 ## Problems
-`How could we ensure we respect our architecture decisions?`
+    How could we ensure we respect our architecture decisions?
 
 ## How to
 You can really make your architecture and its related rules explicit through your test suite by describing architecture rules.
