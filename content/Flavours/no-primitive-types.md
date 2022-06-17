@@ -206,12 +206,7 @@ public record Address(string address, PostalCode postalCode, string city, string
 Model your domain context using Value Objects.
 
 ## Resources
-[Primitive obsession](https://refactoring.guru/fr/smells/primitive-obsession)
-
-[Value Objects](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects)
-
-[Immutable types](immutable-types.md)
-
-[Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
-
-
+- [Primitive obsession](https://refactoring.guru/fr/smells/primitive-obsession)
+- [Value Objects](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects)
+- [Immutable types](/Flavours/immutable-types)
+- [Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
