@@ -27,7 +27,6 @@ There are a lot of advantages of using specific methods over generic `for` or `f
 Let's take an example, imagine we want to identify which `Post` contained in `Blog` contains a given `Tag`
 
 ### Nested for-loops
-
 ```csharp
 private IEnumerable<Post> FilterByTag(string searchedTag)
 {
@@ -47,6 +46,24 @@ private IEnumerable<Post> FilterByTag(string searchedTag)
         }
     }
     return result;
+}
+```
+
+In `kotlin`
+
+```kotlin
+private fun filterByTagWithFor(searchedTag: String): List<Post> {
+    val result = ArrayList<Post>()
+    for (i in 0 until blogs.size) {
+        val currentBlog: Blog = blogs[i]
+        for (j in 0 until currentBlog.posts.size) {
+            val currentPost = currentBlog.posts[j]
+            if (currentPost.tags.contains(searchedTag)) {
+                result.add(currentPost)
+            }
+        }
+    }
+    return result
 }
 ```
 
@@ -76,6 +93,22 @@ private IEnumerable<Post> FilterByTag(string searchedTag)
 }
 ```
 
+In `kotlin`
+
+```kotlin
+private fun filterByTag(searchedTag: String): List<Post> {
+    val result = ArrayList<Post>()
+    for (currentBlog in blogs) {
+        for (currentPost in currentBlog.posts) {
+            if (currentPost.tags.contains(searchedTag)) {
+                result.add(currentPost)
+            }
+        }
+    }
+    return result
+}
+```
+
 ### Yield
 Using `foreach` with `yield` keyword allows us to accumulate without having to instantiate a new `List` by ourselves
 
@@ -95,7 +128,59 @@ private IEnumerable<Post> FilterByTag(string searchedTag)
 }
 ```
 
-### Linq
+### Recursion
+We could use recursion as well
+```csharp
+private IEnumerable<Post> FilterByTag(string searchedTag)
+    => FilterRecursively(
+        new List<Post>(),
+        _blogs.SelectMany(_ => _.Posts).ToImmutableList(),
+        0,
+        (post) => post.Tags.Contains(searchedTag));
+
+private static List<T> FilterRecursively<T>(
+    List<T> result, 
+    ImmutableList<T> initialList, 
+    int index,
+    Func<T, bool> filterFunction)
+{
+    if (index == initialList.Count)
+        return result;
+
+    var item = initialList[index];
+    if (filterFunction(item)) 
+        result.Add(item);
+    
+    return FilterRecursively(result, initialList, index + 1, filterFunction);
+}
+```
+
+In `kotlin`
+
+```kotlin
+private fun filterByTag(searchedTag: String): List<Post> =
+    filter(
+        mutableListOf(),
+        blogs.flatMap { it.posts },
+        0
+    ) { it.tags.contains(searchedTag) }
+
+private tailrec fun <T> filter(
+    result: MutableList<T>,
+    initialList: List<T>,
+    index: Int,
+    filter: (item: T) -> Boolean
+): List<T> {
+    if (index == initialList.size)
+        return result
+    if (filter(initialList[index]))
+        result.add(initialList[index])
+
+    return filter(result, initialList, index + 1, filter)
+}
+```
+
+### Using List pure functions
 Using `Linq` makes our code evern simpler to read and identify the intent
 
 ```csharp
@@ -109,37 +194,17 @@ Alternatively, you can use the other `Linq` syntax
 ```csharp
 private IEnumerable<Post> FilterByTag(string searchedTag) 
     =>  from currentBlog in _blogs 
-        from currentPost in currentBlog.Posts 
+        from currentPost in currentBlog.Posts
         where currentPost.Tags.Contains(searchedTag)
         select currentPost;
 ```
 
-### Recursion
-We could use recursion as well
-```csharp
-private IEnumerable<Post> FilterByTag(string searchedTag)
-    => Filter(
-        new List<Post>(),
-        _blogs.SelectMany(_ => _.Posts).ToImmutableList(),
-        0,
-        (post) => post.Tags.Contains(searchedTag));
+In `kotlin`
 
-private static List<T> Filter<T>(
-    List<T> result, 
-    ImmutableList<T> initialList, 
-    int index,
-    Func<T, bool> filterFunction)
-{
-    if (index == initialList.Count)
-        return result;
-
-    var item = initialList[index];
-    if (filterFunction(item))
-    {
-        result.Add(item);
-    }
-    return Filter(result, initialList, index + 1, filterFunction);
-}
+```kotlin
+private fun filterByTag(searchedTag: String): List<Post> =
+    blogs.flatMap { it.posts }
+        .filter { it.tags.contains(searchedTag) }
 ```
 
 > In this example, we should also encapsulate some logic inside `Blog` and `Post` classes insted of envying data from them in the `Filter` method
@@ -147,6 +212,3 @@ Let's keep this discussion for another flavour 😉
 
 ## Constraint
 Replace a `for-loop` by an alternative described here or another.
-
-## Resources
-- 
