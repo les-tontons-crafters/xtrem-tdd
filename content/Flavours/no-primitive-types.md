@@ -1,7 +1,6 @@
 ﻿---
 categories:
-    - Refactoring
-    - Design
+    - design
 authors:
     - Guillaume Faas
 problems:
@@ -43,8 +42,8 @@ public void UpdateAddress(string address, string postalCode, string city, string
 What if we want to apply specific logic to this address? At the moment, we cannot.
 
 Extension methods are not an option either because a `string` variable could contain anything. 
-Just imagine we create a `public static bool ValidateEmail(this string email)` method. 
-How can you ensure the parameter is really an email? Well, you can't. I could use this method from the `country` or `postalCode` variables.
+Just imagine we create a `public static bool ValidatePostalCode(this string postalCode)` method. 
+How can you ensure the parameter is really a postal code? Well, you can't. I could use this method from the `country` variable.
 
 ### Long list of primitive parameters is hard to understand and prone to errors
 ```csharp
@@ -54,6 +53,8 @@ Using the same method we have above, do you see the problem here?
 The second parameter is actually the PostalCode and not the Street. 
 
 It's **easy** to make mistakes because you need to know what each string contains and in **which order** you have to provide them.
+
+Another good indicator is to `x-out the code` as we can't get any valuable information from the method signature: `void xxx(string, string, string, string)`. 
 
 ## Problems
     - How to recognize objects in my domain?
@@ -87,6 +88,10 @@ public void UpdateAddress(Address newAddress)
 }
 ```
 
+Let's try to `x-out the code` again: `void xxx(Address)`. It's actually meaningful:
+- I know the method is a `command` and generates a side-effect because it returns void.
+- I know it's to create/update an Address because it's the only parameter. 
+
 It also provides another nice benefit as we now can add a **specific behavior** to an address! Like validation... or event better [Parsing](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/).
 
 ```csharp
@@ -104,25 +109,109 @@ public class Address
     
     public static Address ParseAddress(string address, string postalCode, string city, string country)
     {
-        bool isValid = // are parameters valid 
-        return isValid 
+        bool canParse = // verify address can be created 
+        return canParse 
             ? new Address(address, postalCode, city, country) 
             : throw new ParsingException(address, postalCode, city, country);
     }
 }
 ```
 
+It starts to look nice.From now on, we can use the same idea to go further.
 
+For example, should a PostalCode have it's own behavior too? Should it have it's own validation?
 
-<Explain how to start
-Make it as visual as possible with subtitles, code examples, images
-ValueObjects
-- Immutability
-- Value equality
-- self-validation
+It could look like this:
+
+```csharp
+public class PostalCode
+{
+    private PostalCode(string value)
+    {
+        ...
+    }
+    
+    public string Value { get; set; }
+    
+    public static PostalCode ParsePostalCode(string value)
+    {
+        bool canParse = // verify PostalCode can be created 
+        return canParse 
+            ? new PostalCode(value) 
+            : throw new ParsingException<PostalCode>(value);
+    }
+}
+
+public class Address
+{
+    private Address(string address, PostalCode postalCode, string city, string country)
+    {
+        ...
+    }
+
+    public string Address { get; set; }
+    public PostalCode PostalCode { get; set; }
+    public string City { get; set; }
+    public string Company { get; set; }
+    
+    public static Address ParseAddress(string address, PostalCode postalCode, string city, string country)
+    {
+        bool canParse = // verify address can be created 
+        return canParse 
+            ? new Address(address, postalCode, city, country) 
+            : throw new ParsingException<Address>(address, postalCode, city, country);
+    }
+}
+
+public void UpdateAddress(Address newAddress)
+{
+    ...
+}
+```
+
+We have been able to make domain concepts **emerge** from the code with **better segregation**. It will facilitate the evolution and maintenance of the codebase. This can go on and on as long as it provides value.
+
+If you want to go further, the next step would to transform those classes into  [Value Objects](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects) to get the most out of them. Here are a few important characteristics:
+- They are [immutable](immutable-types.md)
+- They have no identity
+- Their equality is value-based
+
+Here's what it could look like:
+
+```csharp
+public record PostalCode(string value)
+{
+    public static PostalCode ParsePostalCode(string value)
+    {
+        bool canParse = // verify PostalCode can be created 
+        return canParse 
+            ? new PostalCode(value) 
+            : throw new ParsingException<PostalCode>(value);
+    }
+}
+
+public record Address(string address, PostalCode postalCode, string city, string country)
+{
+    public static Address ParseAddress(string address, PostalCode postalCode, string city, string country)
+    {
+        bool canParse = // verify address can be created 
+        return canParse 
+            ? new Address(address, postalCode, city, country) 
+            : throw new ParsingException<Address>(address, postalCode, city, country);
+    }
+}
+```
 
 ## Constraint
-<How to add this technique as a constraint in a kata / workshop>
+Model your domain context using Value Objects.
 
 ## Resources
-<Additional resources / curated resources (books, links)>
+[Primitive obsession](https://refactoring.guru/fr/smells/primitive-obsession)
+
+[Value Objects](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects)
+
+[Immutable types](immutable-types.md)
+
+[Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
+
+
