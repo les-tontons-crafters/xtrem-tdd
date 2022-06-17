@@ -92,7 +92,7 @@ Let's try to `x-out the code` again: `void xxx(Address)`. It's actually meaningf
 - I know the method is a `command` and generates a side-effect because it returns void.
 - I know it's to create/update an Address because it's the only parameter. 
 
-It also provides another nice benefit as we now can add a **specific behavior** to an address! Like validation... or event better [Parsing](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/).
+It also provides another nice benefit as we now can add a **specific behavior** to an address! Like validation... or even better [Parsing](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/).
 
 ```csharp
 public class Address
@@ -117,7 +117,7 @@ public class Address
 }
 ```
 
-It starts to look nice.From now on, we can use the same idea to go further.
+It starts to look nice. From now on, we can use the same idea to go further.
 
 For example, should a PostalCode have it's own behavior too? Should it have it's own validation?
 
