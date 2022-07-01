@@ -48,9 +48,11 @@ We will showcase how to add Mutation Testing in Java and .NET projects.
 
 We can run Mutation Testing in Java using the Pitest plugin.
 
-The following example illustrates usage of Pitest with Gradle and JUnit5.
+The following example illustrates usage of Pitest with Gradle/Maven and JUnit5.
+Versions shown are the current versions as at time of writing.
 
-Pitest is registered within build.gradle (versions shown are the current versions as at time of writing):
+### Gradle
+Pitest is registered within `build.gradle`:
 
 ```groovy
 plugins {
@@ -60,6 +62,29 @@ plugins {
 pitest {
     junit5PluginVersion = '0.15'
 }
+```
+
+### Maven
+Pitest is registered within `pom.xml`:
+
+```xml
+<properties>
+    <pitest.version>1.8.0</pitest.version>
+    <pitest.junit5.version>0.15</pitest.junit5.version>
+</properties>
+    
+<plugin>
+    <groupId>org.pitest</groupId>
+    <artifactId>pitest-maven</artifactId>
+    <version>${pitest.version}</version>
+</plugin>
+
+<dependency>
+    <groupId>org.pitest</groupId>
+    <artifactId>pitest-junit5-plugin</artifactId>
+    <version>${pitest.junit5.version}</version>
+    <scope>test</scope>
+</dependency>
 ```
 
 Suppose we have a poorly-written test. This test is executing code, but there are no assertions regarding expected behaviour (assertion-free testing):
