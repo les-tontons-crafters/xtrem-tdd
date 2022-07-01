@@ -3,6 +3,7 @@ categories:
     - Testing
 authors:
     - Valentina Cupać
+    - Guilaume Faas
 problems: 
     - How to evaluate the quality of a test suite?
     - How to overcome the problems of Code Coverage metrics?
@@ -129,6 +130,20 @@ The Stryker tool can be installed as follows:
 ```bash
 dotnet tool install -g dotnet-stryker
 ```
+
+In order to run `Stryker`, you have to go inside your Tests folder:
+
+```bash
+cd [solution]/Tests
+```
+
+Then, the following command:
+
+```bash
+dotnet stryker
+```
+
+The process will generate a `StrykerOutput` folder with subfolders by timestamp, each one of them containing a mutation report.
 
 Suppose we have a poorly-written test. This test is executing code, but there are no assertions regarding expected behaviour (assertion-free testing):
 
