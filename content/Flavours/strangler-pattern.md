@@ -149,9 +149,6 @@ The final step is to rename `UpdateAddressNew` to `UpdateAddress` [using your ID
 Use Strangler when changing method signatures.
 
 ## Resources
-[Martin Fowler - Strangler Fig Application](https://martinfowler.com/bliki/StranglerFigApplication.html
-)
-
-[Cloud Design](https://docs.microsoft.com/en-us/azure/architecture/patterns/strangler-fig)
-
-[Strangler in practice](https://accesto.com/blog/strangler-pattern-in-practice/)
+- [Martin Fowler - Strangler Fig Application](https://martinfowler.com/bliki/StranglerFigApplication.html)
+- [Cloud Design](https://docs.microsoft.com/en-us/azure/architecture/patterns/strangler-fig)
+- [Strangler in practice](https://accesto.com/blog/strangler-pattern-in-practice/)
