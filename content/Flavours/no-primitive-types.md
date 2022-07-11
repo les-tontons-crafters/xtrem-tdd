@@ -92,7 +92,7 @@ Let's try to `x-out the code` again: `void xxx(Address)`. It's actually meaningf
 - I know the method is a `command` and generates a side-effect because it returns void.
 - I know it's to create/update an Address because it's the only parameter. 
 
-It also provides another nice benefit as we now can add a **specific behavior** to an address! Like validation... or even better [Parsing](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/).
+It also provides another nice benefit as we now can add a **specific behavior** to an address! Like validation... or even better: [Parsing](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/).
 
 ```csharp
 public class Address
