@@ -21,18 +21,21 @@ All this knowledge is useful to communicate the architecture, inprove, review an
 
 ## Problems
 Generate and mantain a SAD, solve the following problems:
-    - Document the architecture of a Software
-    - Explain important aspects of the system/software that needs explanaition, by writing down.
-    - Detail complex solutions, algoriths, process.
-    - Knowledgebase of the Software
-    - Visibility, communication, collaboration.
-    - Ensure quality of the Software by avoid obscurences of funcionality.
+
+
+ - Document the architecture of a Software
+ - Explain important aspects of the system/software that needs explanaition, by writing down.
+ - Detail complex solutions, algoriths, process.
+ - Knowledgebase of the Software
+ - Visibility, communication, collaboration.
+ - Ensure quality of the Software by avoid obscurences of funcionality.
 
 ## How to
-Write Down, using the simplest tool available, to document the Architecture of the Software.
-
-<Explain how to start>
-Make it as visual as possible with subtitles, code examples, images
+Write Down, using the simplest tool available, to document the Architecture of the Software. Example:
+ - Gitlab Wiki (allow diagram-as-code embbeded into Markdown)
+ - Github (allow diagram-as-code embbeded into Markdown)
+ - Plain Markdown
+For simplicity, Markdown is very usefull. Create a Wiki inside the Software repository (or separated if needed).
 
 ## Template
     
