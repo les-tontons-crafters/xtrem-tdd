@@ -34,9 +34,10 @@ Start by using the simplest tool available, to document the Architecture of the 
  - Github (allow diagram-as-code embbeded into Markdown)
  - Plain Markdown
 For simplicity, Markdown is very usefull and generaly available. Create a Wiki inside the Software repository (or separated if needed).
+For Diagrams, user the best fit for yoy and you team, the main intent if for Understand and Clear Communication. Example: [MermaidJS](https://mermaid-js.github.io/mermaid/#/) is a razonable good tool for diagraming as code in Markdown.
 
 ## Template
-    
+```markdown    
  - Title
  - Introduction
  - Scope 
@@ -50,9 +51,17 @@ For simplicity, Markdown is very usefull and generaly available. Create a Wiki i
    - Other if Needed
  - ADR
  - References / Additional Bibliography
-    
+```    
 ## Constraint
-
+ - Start as soon as possible. 
+- Always is best to start now. 
+- Work in the SAD in a iterative and incremental manner.
+- Always update de SAD when a change is made.
+- Keep it Simple, avoid long text descriptions, made visual explanation instead.
 
 ## Resources
+ - [Software Arcchitecture description](https://en.wikipedia.org/wiki/Software_architecture_description)
+ - [SAD SEI](https://wiki.sei.cmu.edu/confluence/display/SAD/Main+Page)
+ - [Example SAD](https://github.com/jorgevgut/airquality-mx/wiki/High-level-System-Design)
+
 
