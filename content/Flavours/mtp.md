@@ -33,6 +33,31 @@ A good way to start is with the integrated Wiki on platforms as Gitlab, Github (
 
 ## Example Template
 
+The following is a example structure:
+
+```markdown
+1. Introduction
+1.1. Proyect description
+1.2. Product Description
+2. Scope
+2.1. SUT - Software Under Test Overwie
+<Here is useful a high level diagram, like the used in the SAD>
+2.2. Functionality to be Tested
+2.3. Out of Scope
+<define clearly, what will NOT be tested>
+3. Testing Strategy
+3.1. Criticity Level
+3.2. Test Categories
+3.3. Test Identification (TestID)
+4. Testing Process
+4.1. Flow of Execution
+5. Tools and Environments
+6. Issues Management and Feedback
+7. Resources Management
+```
+
+**IMPORTANT**: Each section need to be short, concise, and unambiguous. Try define each aspect as simple as possible.
+
 ## Constraint
 <How to add this technique as a constraint in a kata / workshop>
 
