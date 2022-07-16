@@ -49,6 +49,9 @@ The following is a example structure:
 3.1. Criticity Level
 3.2. Test Categories
 3.3. Test Identification (TestID)
+3.4. Test Pass/Fail Criteria
+3.5. Test Traceability Schema
+<Here you specify how to link: Test to Features, Bugs, Design, Implementation, releases and so on>
 4. Testing Process
 4.1. Flow of Execution
 5. Tools and Environments
@@ -59,7 +62,12 @@ The following is a example structure:
 **IMPORTANT**: Each section need to be short, concise, and unambiguous. Try define each aspect as simple as possible.
 
 ## Constraint
-<How to add this technique as a constraint in a kata / workshop>
+ - Start as soon as possible.
+ - Always is best to start now.
+ - Work on the MTP in a iterative and incremental manner.
+ - Always update the MTP when a change is made.
+
+> Keep it Simple: avoid long text descriptions, make visual explanation instead.
 
 ## Resources
-<Additional resources / curated resources (books, links)>
+ - [MTP Examples](http://www1.scdhhs.gov/tcoe/worksoft_sdlc/workproducts/master_test_plan_BC36C914.html)
