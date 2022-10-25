@@ -187,7 +187,8 @@ public class CalculatorProperties
 
 As you can see in those examples, QuickCheck generates **x** and **y** parameters itself.
 
-> On a side note, using `.QuickCheckThrowOnFailure()` will reduce the information on each test. So we encourage you to return a `Property` as much as possible.
+> On a side note, using `.QuickCheckThrowOnFailure()` will reduce the information on each test (number of generated values, test failure data, etc.). 
+> So, we encourage you to return a `Property` as often as possible.
 
 ### How to generate complex objects
 FsCheck defines default generators and shrinkers for many types: bool, byte, int, float, char, string, DateTime, lists, array 1D/2D, Set, Map, and objects.
@@ -214,15 +215,14 @@ public void Property() =>
 ```
 
 ### How to apply preconditions between generated values
-We've already seen generators to prefilter, but it is also possible to set up preconditions between generated values.
+We've already seen generators to define how data is created, but it is also possible to set up preconditions between generated values.
 
 Let's assume we have a generator to generate decimals between 0 and 1000000000.
 ```csharp
 public class AmountGenerator
 {
-    private const decimal MaxAMount = 1000000000;
     public static Arbitrary<decimal> Generate() =>
-        Arb.From<decimal>().MapFilter(_ => _, value => value is >= 0 and <= MaxAmount);
+        Arb.From<decimal>().MapFilter(_ => _, value => value is >= 0 and <= 1000000000);
 }
 ```
 
