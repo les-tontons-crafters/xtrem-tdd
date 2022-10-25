@@ -4,6 +4,7 @@ categories:
     - Testing
 authors:
     - Yoan Thirion
+    - Guillaume Faas
 problems: 
     - How can we write bullet proof code?
     - How could we unbiased our tests and identify edge cases?
@@ -11,25 +12,28 @@ problems:
 
 # Property-Based Testing
 ## Description
-Property based testing relies on properties. It checks that a function, program or whatever system under test abides by a property.
-To explain it as simple as possible : we identify and test invariants.
+Property-Based Testing verifies that a function, program or any system under test abides by a property.
+To explain it as simple as possible: we identify and test invariants.
 
-An invariant is something that will always be true no matter what data you provide as an input. To do this, we need to use a framework that will generate random data and check if the invariant remains true. Each time we run our test suite, it will test different combinations.
+An invariant will always be true no matter what input we provide. To achieve this, we need to use a framework that will generate random data and verify the invariant remains true. Each time we run our test suite, it will test different combinations of values.
 
-`It is important to note that a successful property test does not mean that the implementation is correct, it means that the framework has not been able to fault the implementation.`
+`It is essential to mention that a successful property test does not mean the implementation is correct.
+It means that the framework has not been able to fault the implementation.`
 
 ## Why?
-It can definitely help you :
-- Identify Edge-cases that we did not think of (nulls, negative numbers, weird characters, ...)
-- Have a better business understanding: identify business invariants require a deep business understanding
+It can help you :
+- Identify edge cases we did not think of (nulls, negative numbers, weird characters, etc.)
+- Have a better business understanding: Identifying business invariants require a deep business understanding
+- Run your tests with a broader range of values
 
 ## Problems
-    - How can I write bullet proof code?
+    - How can I write bullet-proof code?
+    - How can I verify my tests are deterministic even with a broader range of values?
     - How could we unbiased our tests and identify edge cases?
 
 ### Example Based vs Property-Based
 #### Example-Based Testing
-Generally when we write our tests, we will focus on examples and a scope of inputs that we have identified.
+Generally, when we write our tests, we focus on examples and the scope of the identified inputs.
 We will define our tests as such :
 
 ```text
@@ -38,12 +42,12 @@ When I [call the subject under test] with (x, y, ...) // Act
 Then I expect (output) // Assert
 ```
 
-Thus we validate that our implementation is valid with what was expected (business requirements / acceptance criteria) but on a reduced scope of data (examples identified).
+Thus we validate that our implementation is valid with what was expected (business requirements/acceptance criteria) but on a reduced scope of data (examples identified).
 
 ![Example based](../../images/pbt-example-based.png)
 
 #### Property-Based Testing
-With PBT the promise is to be able to verify that our implementation is valid from a business point of view but with a much larger data scope.
+With Property-Based Testing, the promise is to be able to verify that our implementation is valid from a business point of view but with a much larger data scope.
 
 ```text
 for all (x, y, ...)
@@ -51,10 +55,10 @@ such as precondition (x, y, ...) holds
 property (x, y, ...) is satisfied
 ```
 
-Basically, we :
+In other words :
 - Describe the input
 - Describe a `property` of the output
-- Have the computer trying a lot of random examples and check if it fails
+- Have the process try a lot of random examples and check if it fails
 
 ![Property based details](../../images/pbt-details.png)
 
@@ -63,17 +67,17 @@ With PBT, the promise is to be on the top right of our previous quadrant :
 ![PBT quadrant](../../images/pbt-quadrant.png)
 
 ### What does it mean if a test fail?
-If the framework manages to find an edge-case, there are 3 possibilities :
+If the framework manages to find an edge case, there are three possibilities :
 ```text
 ✅ The production code is not correct
-✅ The way the invariant / property is tested is not correct 
-✅ The understanding and definition of the invariant is not correct
+✅ We are not testing the invariant / property the right way
+✅ The understanding and definition of the invariant are not correct
 ```
 
-It is important to have this reflection as soon as a case is identified, the framework will give you the data used to mess up your code, so you can easily write a classic Unit Test to reproduce the case.
+It is essential to have this reflection as soon as we identify a case, the framework will give you the data used to mess up your code, so you can quickly write a classic Unit Test to reproduce the issue.
 
 ## How to
-The different libraries available on our languages are based on [QuickCheck](https://hackage.haskell.org/package/QuickCheck).
+The different libraries available in our languages are based on [QuickCheck](https://hackage.haskell.org/package/QuickCheck).
 We demonstrate how to use this approach in `C#` using `FsCheck` + `FsCheck.XUnit` (for integration with XUnit)
 
 ```shell
@@ -81,7 +85,7 @@ dotnet add package FsCheck
 dotnet add package FsCheck.Xunit
 ```
 
-With adding those dependencies we are ready to implement our first properties.
+By adding those dependencies, we are ready to implement our first properties.
 
 ## Example
 - Imagine there is a `Calculator` class you want to test :
@@ -98,7 +102,7 @@ namespace PBTKata.Math
 }
 ```
 
-- By identifying examples, we could write UTs as follows:
+- By identifying examples, we could write Unit Tests as follows:
 ```csharp
 namespace PBTKata.Tests.Math.Solution
 {
@@ -116,15 +120,15 @@ namespace PBTKata.Tests.Math.Solution
 }
 ```
 
-- We can easily identify 3 mathematical properties of addition:
+- We can quickly identify three mathematical properties of addition:
     - Commutativity
     - Identity
     - Associativity
 
-With FsCheck we can express our properties in 2 ways :
+With FsCheck, we can express our properties in two ways :
 - Use PropertyAttribute
     - We annotate our Properties with the `PropertyAttribute`
-    - We define a `Property` : a `Predicate` on which we apply the extension method `ToProperty()`
+    - We define a `Property` : a `Predicate` on which we apply the extension method `ToProperty()`. Note that these tests do not return `void`, they return a `Property`.
 
 ```csharp
 public class CalculatorProperties
@@ -138,10 +142,10 @@ public class CalculatorProperties
 }
 ```
 
-- Or use xunit `Fact`
+- Or use xUnit `Fact`
     - We use `Prop.ForAll` to define our properties
     - We check the properties by calling the `QuickCheckThrowOnFailure()` method
-        - This method will notify xunit there is a **failure** in case the property is **not satisfied**
+        - This method will notify xUnit there is a **failure** in case the property is **not satisfied**
 
 ```csharp
 public class CalculatorPropertiesWithXUnitFact
@@ -163,13 +167,34 @@ public class CalculatorPropertiesWithXUnitFact
 }
 ```
 
-As you can see in those examples, x and y parameters will be generated by QuickCheck itself.
+There is also a way to return a `Property` using `Prop.ForAll`.
+```csharp
+public class CalculatorProperties
+{
+    [Property]
+    public Property Commutativity() => 
+        Prop.ForAll<int, int>((x, y) => Add(x, y) == Add(y, x));
+    
+    [Property]
+    public Property Associativity() => 
+        Prop.ForAll<int>(x => Add(Add(x, 1), 1) == Add(x, 2));
+    
+    [Property]
+    public Property Identity() => 
+        Prop.ForAll<int>(x => Add(x, 0) == x);
+}
+```
+
+As you can see in those examples, QuickCheck generates **x** and **y** parameters itself.
+
+> On a side note, using `.QuickCheckThrowOnFailure()` will reduce the information on each test (number of generated values, test failure data, etc.). 
+> So, we encourage you to return a `Property` as often as possible.
 
 ### How to generate complex objects
-FsCheck defines default generators and shrinkers for a large number of types: bool, byte, int, float, char, string, DateTime, lists, array 1D/2D, Set, Map, objects.
+FsCheck defines default generators and shrinkers for many types: bool, byte, int, float, char, string, DateTime, lists, array 1D/2D, Set, Map, and objects.
 It uses reflection to build record types, discriminated unions, tuples, enums and "basic" classes (using only primitive types).
 
-If needed we can declare our own generators and pass them explicitly to our properties
+If needed, we can declare our generators and pass them explicitly to our properties.
 
 ```csharp
 internal static class LetterGenerator
@@ -188,6 +213,33 @@ public void Property() =>
     Prop.ForAll(letterGenerator, ...)
         .QuickCheckThrowOnFailure();
 ```
+
+### How to apply preconditions between generated values
+We've already seen generators to define how data is created, but it is also possible to set up preconditions between generated values.
+
+Let's assume we have a generator to generate decimals between 0 and 1000000000.
+```csharp
+public class AmountGenerator
+{
+    public static Arbitrary<decimal> Generate() =>
+        Arb.From<decimal>().MapFilter(_ => _, value => value is >= 0 and <= 1000000000);
+}
+```
+
+What if we want this generator to generate two **different** values from this generator?
+```csharp
+public class AmountProperties
+{
+    [Property]
+    public Property AmountPropertyTesting() => 
+        Prop.ForAll(
+            Arb.From<AmountGenerator>(),
+            Arb.From<AmountGenerator>(),
+            (amount1, amount2) => SomePropertyToVerify(amount1, amount2).When(amount1 != amount2);
+}
+```
+
+We can use `.When()` on a boolean to provide a condition to a property.
 
 ## Use Cases
 - Verify **idempotence**
@@ -209,15 +261,15 @@ public void Property() =>
     - To replace hardcoded values / discover new test cases (edge cases)
 
 ## Anti-patterns
-- When a test fails : rerun the tests
-    - 2 executions of the same test will not generate the same inputs
-    - Instead of rerunning : investigate the failure and capture through a Unit Test the identified example
+- When a test fails: rerun the tests
+    - Two executions of the same test will not generate the same inputs
+    - Instead of rerunning: investigate the failure and capture through a Unit Test the identified example
 - Re-implement the production code
-    - This is often the drift when writing properties: 
+    - This is often the drift when writing properties
     - Having all the implementation of the production code "leaked" in properties
 - Filter inputs in an "ad-hoc" way
     - We should never filter input values by ourselves
-    - Instead we should use the framework support (filtering, shrinking)
+    - Instead, we should use the framework support (filtering, shrinking)
 
 ![Shrinking / Generation](../../images/pbt-generator.png)
 
