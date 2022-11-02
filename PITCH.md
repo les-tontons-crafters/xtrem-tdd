@@ -18,7 +18,7 @@ It is, in fact, a **collective effort** from **dozens of passionate experts** to
 This site will be the perfect companion for your developer journey.
 
 ### Our Value Proposition
-![Value proposition canvas](static/images/value-proposition-canvas.jpg)
+![Value proposition canvas](static/images/value-proposition-canvas.webp)
 
 ### For who?
 This site is ideal for :

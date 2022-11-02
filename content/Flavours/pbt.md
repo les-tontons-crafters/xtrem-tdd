@@ -44,7 +44,7 @@ Then I expect (output) // Assert
 
 Thus we validate that our implementation is valid with what was expected (business requirements/acceptance criteria) but on a reduced scope of data (examples identified).
 
-![Example based](../../images/pbt-example-based.png)
+![Example based](../../images/pbt-example-based.webp)
 
 #### Property-Based Testing
 With Property-Based Testing, the promise is to be able to verify that our implementation is valid from a business point of view but with a much larger data scope.
@@ -60,11 +60,11 @@ In other words :
 - Describe a `property` of the output
 - Have the process try a lot of random examples and check if it fails
 
-![Property based details](../../images/pbt-details.png)
+![Property based details](../../images/pbt-details.webp)
 
 With PBT, the promise is to be on the top right of our previous quadrant :
 
-![PBT quadrant](../../images/pbt-quadrant.png)
+![PBT quadrant](../../images/pbt-quadrant.webp)
 
 ### What does it mean if a test fail?
 If the framework manages to find an edge case, there are three possibilities :
@@ -271,7 +271,7 @@ We can use `.When()` on a boolean to provide a condition to a property.
     - We should never filter input values by ourselves
     - Instead, we should use the framework support (filtering, shrinking)
 
-![Shrinking / Generation](../../images/pbt-generator.png)
+![Shrinking / Generation](../../images/pbt-generator.webp)
 
 ## Constraint
 Identify a first `Property` and implement it in your current language.

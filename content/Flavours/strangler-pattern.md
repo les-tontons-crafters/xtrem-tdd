@@ -10,7 +10,7 @@ problems:
 
 # Strangler Pattern
 
-![Strangler Fig](../../images/StranglerFig.png)
+![Strangler Fig](../../images/StranglerFig.webp)
 
 ## Description
 The strangler pattern comes from a plant that grows while "strangling" their host.

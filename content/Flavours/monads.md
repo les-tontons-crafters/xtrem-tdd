@@ -75,10 +75,10 @@ To easily understand monads graphics can really help.
 Here are the essential but if you want to go deeper we really encourage you to read the full article available in this article resources.
 Code demonstrated here is in `C#` using the great library [`language-ext`](https://github.com/louthy/language-ext) and `scala` (monads are in the language itself)
 
-![Wrapper](../../images/monads/1.png)
+![Wrapper](../../images/monads/1.webp)
 
 ### Functors
-![Functor and Map](../../images/monads/2.png)
+![Functor and Map](../../images/monads/2.webp)
 
 In `C#`:
 ```csharp
@@ -92,8 +92,8 @@ Some(2).map(x => x + 3) // Some(5)
 None.asInstanceOf[Option[Int]].map(x => x + 3) // None
 ```
 
-![Functors magic](../../images/monads/3.png)
-![Lists are functors too](../../images/monads/4.png)
+![Functors magic](../../images/monads/3.webp)
+![Lists are functors too](../../images/monads/4.webp)
 
 In `C#`:
 ```csharp
@@ -105,7 +105,7 @@ In `scala`:
 List(2, 4, 6).map(x => x + 3) // 5, 7, 9
 ```
 
-![Function composition](../../images/monads/5.png)
+![Function composition](../../images/monads/5.webp)
 
 In `C#`:
 ```csharp
@@ -124,7 +124,7 @@ val add5: Int => Int = add2.compose(add3)
 add5(10) // 15
 ```
 
-![Wrap](../../images/monads/6.png)
+![Wrap](../../images/monads/6.webp)
 
 In `C#`:
 ```csharp
@@ -141,7 +141,7 @@ def half(x: Int): Option[Int] =
 ```
 
 ### Monadic Bind
-![Monadic Bind](../../images/monads/7.png)
+![Monadic Bind](../../images/monads/7.webp)
 
 In `C#`:
 ```csharp
@@ -155,7 +155,7 @@ Some(3).flatMap(half) // None
 Some(4).flatMap(half) // Some(2)
 ```
 
-![Monadic Bind](../../images/monads/8.png)
+![Monadic Bind](../../images/monads/8.webp)
 
 In `C#`:
 ```csharp
@@ -173,7 +173,7 @@ Some(20)
   .flatMap(half) // None
 ```
 
-![Example](../../images/monads/9.png)
+![Example](../../images/monads/9.webp)
 
 ```csharp
 private static Try<string> GetUserInput()
@@ -211,7 +211,7 @@ var pets = FindPerson("Unknown person")
 ```
 
 Here you would receive an exception if no element is found in the collection for the given `fullName`.
-![Failure](../../images/monads/failure.png)
+![Failure](../../images/monads/failure.webp)
 
 #### Use a Monad
 

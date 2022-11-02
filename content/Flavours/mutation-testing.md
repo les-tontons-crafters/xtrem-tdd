@@ -4,7 +4,7 @@ categories:
 authors:
     - Valentina Cupać
     - Guilaume Faas
-problems: 
+problems:
     - How to evaluate the quality of a test suite?
     - How to overcome the problems of Code Coverage metrics?
 ---
@@ -14,10 +14,10 @@ problems:
 
 Mutation Testing is a technique which enables us to evaluate the quality of a test suite. It works by mutating the source code and then running the tests to check whether the tests can detect the mutant. Mutating source code implies making a small change in the source code, for example by changing conditions, inverting negatives, etc.
 
-- In a high quality test suite, mutating the source code results in failing test(s), thereby killing the mutant. 
-- In a low quality test suite, the tests still pass even after the mutation, thereby the mutant has survived. 
+- In a high quality test suite, mutating the source code results in failing test(s), thereby killing the mutant.
+- In a low quality test suite, the tests still pass even after the mutation, thereby the mutant has survived.
 
-Mutation score is the percentage of mutants killed, i.e. `Killed Mutant Count / Total Mutant Count * 100`. 
+Mutation score is the percentage of mutants killed, i.e. `Killed Mutant Count / Total Mutant Count * 100`.
 - A score of 100% is a good indicator for test suite quality.
     - It indicates that if we ever have a regression bug in our code, that it will be able to be detected by the test.
 - Any score less than 100% indicates gaps in the test suite
@@ -30,11 +30,12 @@ Code Coverage metrics (e.g. line coverage, branch coverage) only provide feedbac
 
 In the case of Assertion Free Testing, whereby there are no assertions in the tests, it is possible to get a high Code Coverage score (even 100%) but we're not actually testing anything.
 
-Mutation Testing helps us overcome some problems faced when using classical Code Coverage Metrics - because Mutation Testing is able to identify holes in behavioural assertions. In the case of Assertion Free Testing (or in the case of partial assertion), the Mutation Score will be low, thereby indicating a low quality test suite. 
+Mutation Testing helps us overcome some problems faced when using classical Code Coverage Metrics - because Mutation Testing is able to identify holes in behavioural assertions. In the case of Assertion Free Testing (or in the case of partial assertion), the Mutation Score will be low, thereby indicating a low quality test suite.
 
 
 ## Problems
     - How to evaluate the quality of a test suite?
+    - How to discover missing test cases?
     - How to overcome the problems of Code Coverage metrics?
 
 ## How to
@@ -73,7 +74,7 @@ Pitest is registered within `pom.xml`:
     <pitest.version>1.8.0</pitest.version>
     <pitest.junit5.version>0.15</pitest.junit5.version>
 </properties>
-    
+
 <plugin>
     <groupId>org.pitest</groupId>
     <artifactId>pitest-maven</artifactId>
@@ -99,9 +100,9 @@ void should_add_two_numbers() {
 
 When we run pitest, we get a high score for Line Coverage but a low score for Mutation Coverage:
 
-![Mutation Testing - Low Score - Summary](../../images/mutation-testing-java-low-score-summary.png)
+![Mutation Testing - Low Score - Summary](../../images/mutation-testing-java-low-score-summary.webp)
 
-![Mutation Testing - Low Score - Details](../../images/mutation-testing-java-low-score-details.png)
+![Mutation Testing - Low Score - Details](../../images/mutation-testing-java-low-score-details.webp)
 
 Suppose we have a well-written test, which has appropriate assertions regarding expected behaviour:
 
@@ -115,9 +116,9 @@ void should_add_two_numbers() {
 
 When we run pitest, we get a high score for Line Coverage a high score for Mutation Coverage:
 
-![Mutation Testing - High Score - Summary](../../images/mutation-testing-java-high-score-summary.png)
+![Mutation Testing - High Score - Summary](../../images/mutation-testing-java-high-score-summary.webp)
 
-![Mutation Testing - High Score - Details](../../images/mutation-testing-java-high-score-details.png)
+![Mutation Testing - High Score - Details](../../images/mutation-testing-java-high-score-details.webp)
 
 Source: The above code samples are based on extracts from the GitHub repository [Calculator Kata (Java)](https://github.com/valentinacupac/calculator-kata-java).
 
@@ -157,7 +158,7 @@ public void Should_add_two_numbers()
 
 When we run Stryker, we get a low Mutation Score:
 
-![Mutation Testing - Low Score - Summary](../../images/mutation-testing-dotnet-low-score.png)
+![Mutation Testing - Low Score - Summary](../../images/mutation-testing-dotnet-low-score.webp)
 
 Suppose we have a well-written test, which has appropriate assertions regarding expected behaviour:
 
@@ -172,9 +173,17 @@ public void Should_add_two_numbers()
 
 When we run Stryker, we get a high Mutation Score:
 
-![Mutation Testing - High Score - Summary](../../images/mutation-testing-dotnet-high-score.png)
+![Mutation Testing - High Score - Summary](../../images/mutation-testing-dotnet-high-score.webp)
 
 Source: The above code samples are based on extracts from the GitHub repository [Calculator Kata (.NET)](https://github.com/valentinacupac/calculator-kata-dotnet).
+
+## A real life example
+November 2022, OpenSSL [CVE-2022-3602](https://www.tenable.com/blog/cve-2022-3786-and-cve-2022-3602-openssl-patches-two-high-severity-vulnerabilities) has been fixed.
+
+Take a look at the fix:
+[![Fix CVE](../../images/mutation-testing-openssl.webp)](https://github.com/openssl/openssl/commit/3b421ebc64c7b52f1b9feb3812bdc7781c784332)
+
+It could have been easily detected by using this technique and the vulnerability should have not exist at all...
 
 ## Constraint
 

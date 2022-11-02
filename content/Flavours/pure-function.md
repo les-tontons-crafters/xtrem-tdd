@@ -75,7 +75,7 @@ public class Line {
 ### Pure functions
 Pure functions are in fact queries on our system.
 
-![Pure function and test](../../images/pure-functions-tests.png)
+![Pure function and test](../../images/pure-functions-tests.webp)
 
 ```javascript
 const double = x => x * 2;

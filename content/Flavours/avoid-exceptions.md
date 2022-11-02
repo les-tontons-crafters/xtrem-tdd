@@ -152,7 +152,7 @@ var result = Divide(9, 3d.ToNonZeroDouble());
 ### Hollywood principle
 > Don't Call Us, We'll Call You
 
-![Hollywood principle](../../images/hollywood-principle.jpg)
+![Hollywood principle](../../images/hollywood-principle.webp)
 
 - One of the most popular way to implement this principle is to use `events` or `callbacks`
 - The basic idea behind it is `let the caller decide what happens next`
@@ -184,7 +184,7 @@ Divide(9,
 - As a side effect, continuation has complexified our method signature
 - Use this principle with care to avoid callback hell 
 
-![Callback hell](../../images/callback-hell.jpg)
+![Callback hell](../../images/callback-hell.webp)
 
 > Other alternatives exist and can depend on your programming language / paradigm
 

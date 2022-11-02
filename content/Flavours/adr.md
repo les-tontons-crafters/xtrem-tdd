@@ -29,7 +29,7 @@ When adopting ADRs you will observe many benefits :
 ## How to
 - Define a small process with your team mates
 
-![Example process](../../images/adr-states.png)
+![Example process](../../images/adr-states.webp)
 - Start with a template (Don't be too formal at the beginning)
     - Start with an existing one (check related resources)
 - You can use a tool like [adr-tools](https://github.com/npryce/adr-tools)
@@ -68,7 +68,7 @@ Links on internal context documents, articles, websites, ...
 ```
 
 Alternatively, you can use a visual canvas like this one :
-![Architecture Decision Record Canvas](../../images/adr-canvas.png)
+![Architecture Decision Record Canvas](../../images/adr-canvas.webp)
 
 ## Good practices
 No matter your template, ADRs should be :

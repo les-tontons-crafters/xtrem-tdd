@@ -202,7 +202,7 @@ public record Player(string Name, IReadOnlyList<Card> Cards)
 ```
 
 Is not that beautiful and easy?
-![Star in the eyes](../../images/beautiful.png)
+![Star in the eyes](../../images/beautiful.webp)
 
 ## Constraint
 The next object you need to create must be an `immutable type` 

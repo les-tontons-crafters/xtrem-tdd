@@ -47,7 +47,7 @@ It should be used as a tool to ensure that the team appropriately understands wh
 - When discussing these examples, you may discover questions that no one in the room can answer. 
     - These are written on a `red` post-it and the conversation continues.
 
-![Example mapping format](../../images/example-mapping.png)
+![Example mapping format](../../images/example-mapping.webp)
 
 We continue until the group is convinced that the scope of the User Story is clear, or we run out of time.
 
@@ -63,7 +63,7 @@ We continue until the group is convinced that the scope of the User Story is cle
 - Key examples
 - Shared understanding
 
-![Results](../../images/example-mapping-result.png)
+![Results](../../images/example-mapping-result.webp)
 
 ### Gherkin syntax
 Just like with acceptance criteria we can use [Gherkin syntax](https://cucumber.io/docs/gherkin/reference/) to describe clearly our examples :
@@ -73,7 +73,7 @@ When <action> // Perform an action on our system
 Then <expectations> // What are the expectations
 ```
 
-![Example Mapping by example](../../images/example-mapping-example.png)
+![Example Mapping by example](../../images/example-mapping-example.webp)
 
 ### An example
 ```markdown

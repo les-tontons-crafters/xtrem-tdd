@@ -4,7 +4,7 @@ Still, we tend to constantly spend time **investigating problems** that were **a
 
 **We've been there too** due to a lack of easy access to reliable information. This is precisely the purpose of this website : act as a mentor allowing you to find solutions and grow continuously.
 
-![Xtrem TDD](../images/xtrem-tdd.png)
+![Xtrem TDD](../images/xtrem-tdd.webp)
 
 It aims to provide solutions, ideas and resources to solve problems we've observed countless times like :
 - I found my test suite being brittle, every change causes dozens of tests to fail
@@ -20,7 +20,7 @@ It is, in fact, a **collective effort** from **dozens of passionate experts** to
 This site will be the perfect companion for your developer journey.
 
 ## Our Value Proposition
-![Value proposition canvas](../images/value-proposition-canvas.jpg)
+![Value proposition canvas](../images/value-proposition-canvas.webp)
 
 ## For who?
 It is ideal for:

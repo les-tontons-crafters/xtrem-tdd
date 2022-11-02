@@ -5,7 +5,7 @@
 This repository is used to generate a knowledge base to help developers discover useful topics.  
 For now it is hosted here [here](https://xtrem-tdd.netlify.app/)
 
-![Xtrem TDD](static/images/xtrem-tdd.png)
+![Xtrem TDD](static/images/xtrem-tdd.webp)
 
 More explanations [here](PITCH.md)
 
