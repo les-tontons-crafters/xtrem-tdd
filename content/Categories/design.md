@@ -5,4 +5,6 @@
 - [[Immutable Types]]
 - [[Monads]]
 - [[No For Loops]]
+- [[No primitive types]]
+- [[Parse, don't Validate]]
 - [[Pure Functions]]

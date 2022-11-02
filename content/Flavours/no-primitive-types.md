@@ -1,6 +1,6 @@
 ﻿---
 categories:
-    - design
+    - Design
 authors:
     - Guillaume Faas
 problems:
@@ -60,6 +60,7 @@ Another good indicator is to `x-out the code` as we can't get any valuable infor
     - How to recognize objects in my domain?
     - How to find out where's the logic of a specific domain concept?
     - How to understand a method signature containing only primitives?
+
 
 ## How to
 The first step is usually to look properties that could be grouped together, belong together and change together.
