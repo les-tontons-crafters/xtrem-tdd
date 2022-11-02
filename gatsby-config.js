@@ -1,4 +1,5 @@
 const path = require('path')
+const { lazy } = require('react')
 
 const pathPrefix = process.env.KB_BASE_PATH || '/'
 
@@ -39,6 +40,7 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 590,
+              loading: "lazy"
             },
           },
         ],
