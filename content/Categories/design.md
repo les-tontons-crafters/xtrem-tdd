@@ -1,5 +1,6 @@
 # Design
 - [[Avoid Exceptions]]
+- [[Command Query Separation]]
 - [[Factory Pattern]]
 - [[Generate Code From Usage]]
 - [[Immutable Types]]
