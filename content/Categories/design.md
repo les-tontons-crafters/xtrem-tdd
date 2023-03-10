@@ -9,3 +9,4 @@
 - [[No primitive types]]
 - [[Parse, don't Validate]]
 - [[Pure Functions]]
+- [[Tell Don't Ask]]
