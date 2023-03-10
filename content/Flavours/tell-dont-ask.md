@@ -93,7 +93,7 @@ public class Order
 ### Tell code
 ![Tell example](../../images/tell.webp)
 
-Let's refactor this code by moving transition state inside the `Order` entity.
+Let's refactor this code by moving transition state inside the `Order` entity and enforce `encapsulation`.
 
 ```csharp
 public class OrderApprovalUseCase
