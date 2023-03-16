@@ -1082,10 +1082,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@gatsby-project-kb/transformer-wiki-references@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@gatsby-project-kb/transformer-wiki-references/-/transformer-wiki-references-0.3.0.tgz#e72de815459dba171b15ed15efec72bed5f28e6e"
-  integrity sha512-nxfFUIMl1J54B7alHd1mwzC7dXdiKXDm1Dm3LKV5/Xbz9neYQ9BCMTfgu5vrRNfHYA5TW/Cm29Sfg3ODHIi02w==
+"@gatsby-project-kb/transformer-wiki-references@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@gatsby-project-kb/transformer-wiki-references/-/transformer-wiki-references-0.3.1.tgz#cb1e6a9390479ddc73a2306420d5645f26b3ef5f"
+  integrity sha512-rSHtyC0dYUgBKTMTVoHiQvl8mldpG6jC1Zug96uHKwqyRxFjFpison/s2NtqC5nCPcB0yd9TYNNhuclzdsPwFw==
   dependencies:
     "@nodelib/fs.walk" "^1.2.6"
     anymatch "^3.1.2"
@@ -6792,12 +6792,13 @@ gatsby-remark-relative-images@^2.0.2:
     traverse "0.6.6"
     unist-util-select "3.0.1"
 
-gatsby-remark-wiki-link@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-wiki-link/-/gatsby-remark-wiki-link-0.4.0.tgz#54bd124cd4b8079ebfe66b8eabb912597757126b"
-  integrity sha512-hQBUvt8EAygrWzUyFwB3fO7ItsRK+KQaUcn86zvoU4a4iOVYy76Jt2YAFrnGSQERm7AWkUJreOjGk8XlSiVHuA==
+gatsby-remark-wiki-link@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-wiki-link/-/gatsby-remark-wiki-link-0.4.1.tgz#993649bd9e14a48f46465822b26efee3805dff10"
+  integrity sha512-npZv5RGQag8XKqMJOtk02AmNy9CWQJHM7xOLxrQdNk7Jf7hRJyzxzn8uUe4qo5SvOS2+w5NGIksDzLaFS1hA4g==
   dependencies:
     slugify "^1.4.6"
+    unist-util-visit "^2.0.3"
 
 gatsby-sharp@^0.6.1:
   version "0.6.1"
@@ -6852,12 +6853,12 @@ gatsby-telemetry@^3.12.1:
     lodash "^4.17.21"
     node-fetch "^2.6.7"
 
-gatsby-theme-kb@^0.9.3:
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-kb/-/gatsby-theme-kb-0.9.3.tgz#a70909c64e61d7dfde0957802f2abe1d6d1f9727"
-  integrity sha512-zk3zo8dFnldQd6UMQv/tOa4/+HTQL4ZmBfoI/rwIgFYJR6ASIxoM8RSQX2ryZUcmHWQMVmolrlSeImVDxzGPWA==
+gatsby-theme-kb@^0.9.4:
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-kb/-/gatsby-theme-kb-0.9.4.tgz#f6f7ee84416b614d0e5bd55dd2f858bd164e93f8"
+  integrity sha512-1tHg04cnhkgBWFdjv+hrhcROT2RL2mv9szDYYZAJa5DXcpzDCx2ijjT+W8rFcNtVxgkZdrmI13qMwXXmS0BIZg==
   dependencies:
-    "@gatsby-project-kb/transformer-wiki-references" "^0.3.0"
+    "@gatsby-project-kb/transformer-wiki-references" "^0.3.1"
     "@mdx-js/mdx" "^1.6.22"
     "@mdx-js/react" "^1.6.22"
     "@reecelucas/react-use-hotkeys" "^1.3.1"
@@ -6875,7 +6876,7 @@ gatsby-theme-kb@^0.9.3:
     gatsby-plugin-typescript "^4.4.0"
     gatsby-react-router-scroll "^5.4.0"
     gatsby-remark-double-parenthesis-link "^0.1.5"
-    gatsby-remark-wiki-link "^0.4.0"
+    gatsby-remark-wiki-link "^0.4.1"
     gatsby-source-filesystem "^4.4.0"
     note-graph "^0.3.0"
     path-browserify "^1.0.1"
