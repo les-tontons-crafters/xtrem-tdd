@@ -21,7 +21,7 @@
     "gatsby-theme-kb": "^0.9.4",
     "gatsby-transformer-remark": "5.12.1",
     "gatsby-transformer-sharp": "4.12.1",
-    "gatsby-plugin-google-gtag": "5.7.0",
+    "gatsby-plugin-google-gtag": "4.25.0",
     "prismjs": "^1.23.0",
     "react": "^17",
     "react-dom": "^17"
