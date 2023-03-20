@@ -7,7 +7,8 @@
     "start": "develop",
     "build": "gatsby build --prefix-paths",
     "dev": "gatsby develop",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "prod": "gatsby build && gatsby serve"
   },
   "dependencies": {
     "gatsby": "^4.4.0",
@@ -20,6 +21,7 @@
     "gatsby-theme-kb": "^0.9.4",
     "gatsby-transformer-remark": "5.12.1",
     "gatsby-transformer-sharp": "4.12.1",
+    "gatsby-plugin-google-gtag": "5.7.0",
     "prismjs": "^1.23.0",
     "react": "^17",
     "react-dom": "^17"
