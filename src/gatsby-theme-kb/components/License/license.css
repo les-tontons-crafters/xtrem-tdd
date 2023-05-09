@@ -6,4 +6,5 @@ img {
   display: inline-block;
   margin-left: 1rem;
   margin-bottom: 0%;
+  vertical-align: middle;
 }
