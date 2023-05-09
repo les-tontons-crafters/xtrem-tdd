@@ -2,7 +2,7 @@
   "private": true,
   "version": "1.4.5",
   "name": "xtrem-tdd",
-  "license": "MIT",
+  "license": "CC BY-SA 4.0",
   "scripts": {
     "start": "develop",
     "build": "gatsby build --prefix-paths",

@@ -1,4 +1,5 @@
 import React from 'react'
+import License from "../License/license"
 import ThemeTopic, {
   Props as ThemeTopicProps,
 } from 'gatsby-theme-kb/src/components/Topic'
@@ -9,6 +10,7 @@ const Topic = (props: TopicProps) => {
   return (
     <>
       <ThemeTopic {...props}></ThemeTopic>
+      <License></License>
     </>
   )
 }

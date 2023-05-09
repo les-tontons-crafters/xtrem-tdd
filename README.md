@@ -1,6 +1,7 @@
 # Xtrem TDD
 [![Contributors](https://github.com/les-tontons-crafters/xtrem-tdd/actions/workflows/contributors.yml/badge.svg)](https://github.com/les-tontons-crafters/xtrem-tdd/actions/workflows/contributors.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f4576573-6d09-4020-97ed-8ffbb59dfa7a/deploy-status)](https://app.netlify.com/sites/xtrem-tdd/deploys)
+[![CC-BY-SA-4.0](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 This repository is used to generate a knowledge base to help developers discover useful topics.  
 For now it is hosted here [here](https://xtrem-tdd.netlify.app/)
@@ -54,3 +55,6 @@ We welcome contributions to this repository!
     </td>
 </tr>
 </table>
+
+## License
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).

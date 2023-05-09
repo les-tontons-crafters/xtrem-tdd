@@ -1,0 +1,9 @@
+.center {
+    text-align: center;
+}
+
+img {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-bottom: 0%;
+}
