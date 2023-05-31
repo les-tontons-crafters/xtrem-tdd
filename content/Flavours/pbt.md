@@ -283,3 +283,5 @@ You can find a list of libraries per language [here](https://en.wikipedia.org/wi
 - [An introduction to PBT - Scott Wlaschin](https://fsharpforfunandprofit.com/pbt/)
 - [A journey to Property-Based Testing](https://yoan-thirion.gitbook.io/knowledge-base/software-craftsmanship/code-katas/improve-your-software-quality-with-property-based-testing/a-journey-to-property-based-testing)
 - [Solving the Diamond Kata with PBT in F#](https://blog.ploeh.dk/2015/01/10/diamond-kata-with-fscheck/)
+
+[![A case study for PBT](../../images/a-case-study-for-pbt.webp)](https://youtu.be/ait312U73dQ "A case study for Property-Based Testing")
