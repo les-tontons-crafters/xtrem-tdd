@@ -77,10 +77,10 @@ Here is another example in `java` with `maven`:
 ```
 
 ### Configure Static Code Analysis
-In static code analysis tools like [`SonarCloud`](https://sonarcloud.io/) you can configure `Quality Gates` defining rules for making an analysis successful or not:
+In static code analysis tools like [SonarCloud](https://sonarcloud.io/) you can configure `Quality Gates` defining rules for making an analysis successful or not:
 ![Sonar Quality Gates](../../images/treat-warnings-as-errors/quality-gates.webp)
 
-You should configure it to be the more drastic as possible and not authorizing any warnings in it.
+You should configure it to be the more drastic as possible and not authorizing any warning in it.
 If at one point the analysis fails apply the lean principle `Stop the line` and fix it.
 
 You should really treat those warnings as defects on your production line.
