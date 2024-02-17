@@ -13,8 +13,8 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-background-color: #f8f9fa;
   --ifm-color-content: #333333;
-  --ifm-color-content-inverse: #f8f9fa;
-  --ifm-footer-color: #f8f9fa;
+  --ifm-color-content-inverse: #ffffff;
+  --ifm-footer-color: #ffffff;
   --ifm-footer-background-color: #242526;
   --ifm-cta-background-color: #f3f3f3;
   --ifm-proposition-background-color: #242526;
@@ -24,10 +24,10 @@
 [data-theme='dark'] {
   --ifm-color-primary: #637aff;
   --ifm-color-primary-dark: #4c46b4;
-  --ifm-footer-color: #f8f9fa;
+  --ifm-footer-color: #ffffff;
   --ifm-footer-background-color: #242526;
-  --ifm-cta-background-color: #333333;
-  --ifm-proposition-background-color: #f8f9fa;
-  --ifm-color-content: #f8f9fa;
+  --ifm-color-content: #ffffff;
   --ifm-color-content-inverse: #333333;
+  --ifm-cta-background-color: #333333;
+  --ifm-proposition-background-color: #faf8f8;
 }

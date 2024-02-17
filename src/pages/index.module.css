@@ -12,7 +12,7 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 2rem 0;
   }
 }
 
@@ -23,15 +23,15 @@
 }
 
 section {
-  padding-top: 3rem;
+  padding: 4rem 0;
 }
 
 section h1 {
   padding-bottom: 3rem;
+  text-align: center;
 }
 
 .ctaBanner {
-  padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -39,23 +39,12 @@ section h1 {
 }
 
 .proposition {
+  text-align: center;
   color: var(--ifm-color-content-inverse);
   background-color: var(--ifm-proposition-background-color);
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  text-align: center;
 }
 
 .proposition img {
   width: 80%;
   border-radius: 5px;
-}
-
-.about {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.about h1 {
-  text-align: center;
 }

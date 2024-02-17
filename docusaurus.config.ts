@@ -47,6 +47,13 @@ const config: Config = {
   ],
 
   themeConfig: {
+    metadata: [
+      {
+        name: 'keywords',
+        content: `agile, software, developer, software craftmanship, craft, xtrem-tdd, 
+          tdd, bdd, ddd, architectur, design, practices, refactoring, testing`,
+      },
+    ],
     image: 'images/xtrem-tdd.webp',
     navbar: {
       title: 'XTrem TDD',
