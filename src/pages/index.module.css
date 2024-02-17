@@ -41,7 +41,8 @@ section h1 {
 .proposition {
   color: var(--ifm-color-content-inverse);
   background-color: var(--ifm-proposition-background-color);
-  padding: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   text-align: center;
 }
 
@@ -51,7 +52,8 @@ section h1 {
 }
 
 .about {
-  padding: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .about h1 {

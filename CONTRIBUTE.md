@@ -5,7 +5,7 @@ The master branch of this repository contains the latest stable changes.
 ### Guidelines
 
 - Fork this repository
-- Join us on [Discord](https://discord.gg/YdTeXr48)
+- Join us on [Discord](https://discord.gg/ZD6XYRda2K)
 - Join the Trello board: the link will be shared with you through Discord
 - Add your new content by :
   - Adding a new markdown file under `content/Flavours`
