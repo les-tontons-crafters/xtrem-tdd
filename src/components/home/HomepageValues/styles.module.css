@@ -5,6 +5,11 @@
   width: 100%;
 }
 
+.items div {
+  width: 100%;
+  text-align: center;
+}
+
 .itemSvg {
   height: 200px;
   width: 200px;

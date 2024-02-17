@@ -2,7 +2,13 @@
   display: flex;
   align-items: center;
   padding: 2rem 0;
+  padding-top: 5rem;
   width: 100%;
+}
+
+.items div {
+  width: 100%;
+  text-align: center;
 }
 
 .itemSvg {

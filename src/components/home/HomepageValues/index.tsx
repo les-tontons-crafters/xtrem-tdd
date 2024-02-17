@@ -13,19 +13,19 @@ const ValueList: ValueItem[] = [
     title: 'Community',
     Svg: require('@site/static/images/home/undraw_engineering_team_a7n2.svg')
       .default,
-    description: <>Keen to share their knowledge with the whole community</>,
+    description: <>Keen to share their knowledge with the whole community.</>,
   },
   {
     title: 'Excellence',
     Svg: require('@site/static/images/home/undraw_wireframing_re_q6k6.svg')
       .default,
-    description: <>Steadily seeking how to build the thing right</>,
+    description: <>Steadily seeking how to build the thing right.</>,
   },
   {
     title: 'Learning',
     Svg: require('@site/static/images/home/undraw_mathematics_-4-otb.svg')
       .default,
-    description: <>Continuous improvement and learning</>,
+    description: <>Continuous improvement and learning.</>,
   },
 ];
 
@@ -46,7 +46,7 @@ function Item({ title, Svg, description }: ValueItem) {
 export default function HomepageValues(): JSX.Element {
   return (
     <section className={styles.items}>
-      <div>
+      <div className="container">
         <Heading as="h1" className="hero__title">
           Our Values
         </Heading>

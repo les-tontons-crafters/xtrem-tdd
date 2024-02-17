@@ -19,7 +19,10 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/">
+          <Link
+            className="button button--secondary button--lg"
+            to="/category/flavours"
+          >
             Get Started 🎯
           </Link>
         </div>
@@ -30,7 +33,7 @@ function HomepageHeader() {
 
 function HomepageAbout() {
   return (
-    <section>
+    <section className={clsx('container', styles.about)}>
       <Heading as="h1" className="hero__title">
         About
       </Heading>
@@ -85,16 +88,18 @@ function HomepageAbout() {
 
 function HomepageProposition() {
   return (
-    <section>
-      <Heading as="h1" className="hero__title">
-        Our Value Proposition
-      </Heading>
-      <img
-        src={
-          require('@site/static/images/value-proposition-canvas.webp').default
-        }
-        alt="Image - Value Proposition"
-      />
+    <section className={styles.proposition}>
+      <div className="container">
+        <Heading as="h1" className="hero__title">
+          Our Value Proposition
+        </Heading>
+        <img
+          src={
+            require('@site/static/images/value-proposition-canvas.webp').default
+          }
+          alt="Image - Value Proposition"
+        />
+      </div>
     </section>
   );
 }
@@ -104,7 +109,10 @@ function HomepageCTA() {
     <section className={styles.ctaBanner}>
       <div className="container">
         <div className={styles.buttons}>
-          <Link className="button button--primary button--lg" to="/">
+          <Link
+            className="button button--primary button--lg"
+            to="/category/flavours"
+          >
             Get Started 🎯
           </Link>
         </div>
@@ -117,7 +125,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout title={`Welcome`} description="Your personal craft mentor">
       <HomepageHeader />
-      <main className="container">
+      <main>
         <HomepageAbout />
         <HomepageProposition />
         <HomepagePeople />

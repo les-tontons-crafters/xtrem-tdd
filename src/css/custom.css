@@ -16,14 +16,18 @@
   --ifm-color-content-inverse: #f8f9fa;
   --ifm-footer-color: #f8f9fa;
   --ifm-footer-background-color: #242526;
+  --ifm-cta-background-color: #f3f3f3;
+  --ifm-proposition-background-color: #242526;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #637aff;
-  --ifm-color-primary-dark: rgb(76, 70, 180);
-  --ifm-color-secondary-dark: #333333;
-
+  --ifm-color-primary-dark: #4c46b4;
   --ifm-footer-color: #f8f9fa;
   --ifm-footer-background-color: #242526;
+  --ifm-cta-background-color: #333333;
+  --ifm-proposition-background-color: #f8f9fa;
+  --ifm-color-content: #f8f9fa;
+  --ifm-color-content-inverse: #333333;
 }

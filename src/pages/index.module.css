@@ -4,7 +4,7 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 3rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -35,5 +35,25 @@ section h1 {
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: var(--ifm-color-secondary-dark);
+  background-color: var(--ifm-cta-background-color);
+}
+
+.proposition {
+  color: var(--ifm-color-content-inverse);
+  background-color: var(--ifm-proposition-background-color);
+  padding: 5rem;
+  text-align: center;
+}
+
+.proposition img {
+  width: 80%;
+  border-radius: 5px;
+}
+
+.about {
+  padding: 5rem;
+}
+
+.about h1 {
+  text-align: center;
 }

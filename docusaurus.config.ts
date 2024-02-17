@@ -64,7 +64,7 @@ const config: Config = {
         {
           href: 'https://github.com/les-tontons-crafters/xtrem-tdd',
           position: 'right',
-          html: `<i class="fab fa-github fa-xl" alt="Github" />`,
+          html: '<i class="fab fa-github fa-xl" alt="Github"></i>',
         },
       ],
     },
@@ -79,7 +79,8 @@ const config: Config = {
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      darkTheme: prismThemes.vsDark,
+      additionalLanguages: ['csharp', 'java'],
     },
   } satisfies Preset.ThemeConfig,
   plugins: ['docusaurus-lunr-search'],
