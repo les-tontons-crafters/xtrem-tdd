@@ -34,9 +34,9 @@ We welcome contributions to this repository!
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/valentinacupac>
-            <img src=https://avatars.githubusercontent.com/u/677159?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Valentina Cupać (Валентина Цупаћ)/>
+            <img src=https://avatars.githubusercontent.com/u/677159?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Valentina (Cupać) Jemuović/>
             <br />
-            <sub style="font-size:14px"><b>Valentina Cupać (Валентина Цупаћ)</b></sub>
+            <sub style="font-size:14px"><b>Valentina (Cupać) Jemuović</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
