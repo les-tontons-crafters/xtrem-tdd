@@ -133,7 +133,7 @@ const featuresPeople: FeaturesProps = {
       description: <>Programmers who lack guidance and mentoring.</>,
     },
     {
-      title: 'Software Craftsmen',
+      title: 'Software Crafters',
       Svg: require('@site/static/images/home/undraw_revenue_re_2bmg.svg')
         .default,
       description: (
