@@ -1,29 +1,51 @@
 {
-  "private": true,
-  "version": "1.4.5",
   "name": "xtrem-tdd",
-  "license": "CC BY-SA 4.0",
+  "version": "2.0.0",
+  "private": true,
   "scripts": {
-    "start": "develop",
-    "build": "gatsby build --prefix-paths",
-    "dev": "gatsby develop",
-    "clean": "gatsby clean",
-    "prod": "gatsby build && gatsby serve"
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "dev": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc"
   },
   "dependencies": {
-    "gatsby": "^4.4.0",
-    "gatsby-plugin-google-gtag": "5.7.0",
-    "gatsby-plugin-manifest": "4.14.0",
-    "gatsby-plugin-no-sourcemaps": "^2.8.0",
-    "gatsby-plugin-sharp": "4.12.1",
-    "gatsby-remark-images": "6.12.1",
-    "gatsby-remark-prismjs": "^3.13.0",
-    "gatsby-remark-relative-images": "^2.0.2",
-    "gatsby-theme-kb": "^0.9.4",
-    "gatsby-transformer-remark": "5.12.1",
-    "gatsby-transformer-sharp": "4.12.1",
-    "prismjs": "^1.23.0",
-    "react": "^17",
-    "react-dom": "^17"
+    "@docusaurus/core": "3.1.1",
+    "@docusaurus/preset-classic": "3.1.1",
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "docusaurus-lunr-search": "^3.3.2",
+    "font-awesome": "^4.7.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.1.1",
+    "@docusaurus/tsconfig": "3.1.1",
+    "@docusaurus/types": "3.1.1",
+    "typescript": "~5.2.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0"
   }
 }
