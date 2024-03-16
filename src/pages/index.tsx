@@ -138,7 +138,7 @@ const featuresPeople: FeaturesProps = {
         .default,
       description: (
         <>
-          Aspirant Software Craftsmen keen to learn new practices continuously.
+          Aspirant Software Crafters keen to learn new practices continuously.
         </>
       ),
     },
