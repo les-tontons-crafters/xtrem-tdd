@@ -1,0 +1,252 @@
+[
+  {
+    "id": "Architecture Decision Record",
+    "title": "Architecture Decision Record",
+    "linkTo": [],
+    "referencedBy": [
+      "Architecture"
+    ]
+  },
+  {
+    "id": "Architecture",
+    "title": "Architecture",
+    "linkTo": [
+      "Architecture Decision Record",
+      "Architecture Unit Tests",
+      "Clean Architecture",
+      "Software Architecture Document"
+    ],
+    "referencedBy": []
+  },
+  {
+    "id": "Architecture Unit Tests",
+    "title": "Architecture Unit Tests",
+    "linkTo": [],
+    "referencedBy": [
+      "Architecture"
+    ]
+  },
+  {
+    "id": "Clean Architecture",
+    "title": "Clean Architecture",
+    "linkTo": [],
+    "referencedBy": [
+      "Architecture"
+    ]
+  },
+  {
+    "id": "Software Architecture Document",
+    "title": "Software Architecture Document",
+    "linkTo": [],
+    "referencedBy": [
+      "Architecture"
+    ]
+  },
+  {
+    "id": "Avoid Exceptions",
+    "title": "Avoid Exceptions",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "Design",
+    "title": "Design",
+    "linkTo": [
+      "Avoid Exceptions",
+      "Command Query Separation",
+      "Factory Pattern",
+      "Generate Code From Usage",
+      "Immutable Types",
+      "Monads",
+      "No For Loops",
+      "No primitive types",
+      "Parse, don't Validate",
+      "Pure Functions",
+      "Tell Don't Ask",
+      "Fluent Assertions",
+      "Property-Based Testing"
+    ],
+    "referencedBy": []
+  },
+  {
+    "id": "Command Query Separation",
+    "title": "Command Query Separation",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "Factory Pattern",
+    "title": "Factory Pattern",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "Generate Code From Usage",
+    "title": "Generate Code From Usage",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "Immutable Types",
+    "title": "Immutable Types",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "Monads",
+    "title": "Monads",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "No For Loops",
+    "title": "No For Loops",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "No primitive types",
+    "title": "No primitive types",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "Parse, don't Validate",
+    "title": "Parse, don't Validate",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "Pure Functions",
+    "title": "Pure Functions",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "Tell Don't Ask",
+    "title": "Tell Don't Ask",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "Example Mapping",
+    "title": "Example Mapping",
+    "linkTo": [],
+    "referencedBy": [
+      "Practices"
+    ]
+  },
+  {
+    "id": "Practices",
+    "title": "Practices",
+    "linkTo": [
+      "Example Mapping",
+      "Keep Dependencies Up-to-Date",
+      "Treat Warnings as Errors"
+    ],
+    "referencedBy": []
+  },
+  {
+    "id": "Keep Dependencies Up-to-Date",
+    "title": "Keep Dependencies Up-to-Date",
+    "linkTo": [],
+    "referencedBy": [
+      "Practices"
+    ]
+  },
+  {
+    "id": "Treat Warnings as Errors",
+    "title": "Treat Warnings as Errors",
+    "linkTo": [],
+    "referencedBy": [
+      "Practices"
+    ]
+  },
+  {
+    "id": "Strangler Pattern",
+    "title": "Strangler Pattern",
+    "linkTo": [],
+    "referencedBy": [
+      "Refactoring"
+    ]
+  },
+  {
+    "id": "Refactoring",
+    "title": "Refactoring",
+    "linkTo": [
+      "Strangler Pattern"
+    ],
+    "referencedBy": []
+  },
+  {
+    "id": "Fluent Assertions",
+    "title": "Fluent Assertions",
+    "linkTo": [],
+    "referencedBy": [
+      "Design"
+    ]
+  },
+  {
+    "id": "Mutation Testing",
+    "title": "Mutation Testing",
+    "linkTo": [],
+    "referencedBy": [
+      "Testing"
+    ]
+  },
+  {
+    "id": "Testing",
+    "title": "Testing",
+    "linkTo": [
+      "Mutation Testing",
+      "Property-Based Testing",
+      "Test Data Builders"
+    ],
+    "referencedBy": []
+  },
+  {
+    "id": "Property-Based Testing",
+    "title": "Property-Based Testing",
+    "linkTo": [],
+    "referencedBy": [
+      "Design",
+      "Testing"
+    ]
+  },
+  {
+    "id": "Test Data Builders",
+    "title": "Test Data Builders",
+    "linkTo": [],
+    "referencedBy": [
+      "Testing"
+    ]
+  },
+  {
+    "id": "Cards",
+    "title": "Cards",
+    "linkTo": [],
+    "referencedBy": []
+  }
+]

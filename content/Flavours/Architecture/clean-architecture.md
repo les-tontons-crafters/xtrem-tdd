@@ -1,6 +1,6 @@
 ---
 categories:
-  - architecture
+  - Architecture
 authors:
   - Yoan Thirion
 problems:

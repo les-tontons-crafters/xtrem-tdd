@@ -1,6 +1,6 @@
 ---
 categories:
-  - design
+  - Design
 authors:
   - Guillaume Faas
 problems:

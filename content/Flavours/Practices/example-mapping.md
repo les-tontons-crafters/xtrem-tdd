@@ -1,6 +1,6 @@
 ---
 categories:
-  - Practice
+  - Practices
 authors:
   - Yoan Thirion
 problems:
