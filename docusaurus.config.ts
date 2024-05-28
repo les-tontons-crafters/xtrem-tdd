@@ -84,7 +84,15 @@ const config: Config = {
       additionalLanguages: ['csharp', 'java'],
     },
   } satisfies Preset.ThemeConfig,
-  plugins: ['docusaurus-lunr-search'],
+  plugins: [
+    'docusaurus-lunr-search',
+    [
+      'docusaurus-graph',
+      {
+        path: 'content',
+      },
+    ],
+  ],
 };
 
 export default config;

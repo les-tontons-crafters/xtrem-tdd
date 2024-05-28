@@ -1,6 +1,6 @@
 ---
 categories:
-  - design
+  - Design
 authors:
   - Yoan Thirion
 problems:
