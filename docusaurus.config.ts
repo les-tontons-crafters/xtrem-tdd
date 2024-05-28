@@ -69,9 +69,9 @@ const config: Config = {
           label: 'Categories',
         },
         {
-          href: 'https://github.com/les-tontons-crafters/xtrem-tdd',
+          type: 'html',
           position: 'right',
-          html: templates.github,
+          value: templates.github,
         },
       ],
     },
