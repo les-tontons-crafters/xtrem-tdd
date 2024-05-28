@@ -34,16 +34,9 @@ We welcome contributions to this repository!
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/valentinacupac>
-            <img src=https://avatars.githubusercontent.com/u/677159?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Valentina (Cupać) Jemuović/>
+            <img src=https://avatars.githubusercontent.com/u/677159?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Valentina (Cupać) Jemuović />
             <br />
-            <sub style="font-size:14px"><b>Valentina (Cupać) Jemuović</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/matiaspakua>
-            <img src=https://avatars.githubusercontent.com/u/20072974?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Matias Miguez/>
-            <br />
-            <sub style="font-size:14px"><b>Matias Miguez</b></sub>
+            <sub style="font-size:14px"><b>Valentina (Cupać) Jemuović </b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
@@ -51,6 +44,13 @@ We welcome contributions to this repository!
             <img src=https://avatars.githubusercontent.com/u/54241944?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Azzedine E./>
             <br />
             <sub style="font-size:14px"><b>Azzedine E.</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/matiaspakua>
+            <img src=https://avatars.githubusercontent.com/u/20072974?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Matias Miguez/>
+            <br />
+            <sub style="font-size:14px"><b>Matias Miguez</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
