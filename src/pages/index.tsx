@@ -3,7 +3,6 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import '@fortawesome/fontawesome-free/css/all.css';
 import styles from './index.module.css';
 import Features, { FeaturesProps } from '../components/Features';
 
